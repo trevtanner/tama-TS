@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +167,7 @@
       <updated>1566176892686</updated>
       <workItem from="1566176893808" duration="3102000" />
       <workItem from="1566200938513" duration="41000" />
-      <workItem from="1566201193546" duration="1048000" />
+      <workItem from="1566201193546" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <created>1566200814482</created>
@@ -203,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566202218548</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="README Edit">
+      <created>1566202257051</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566202257051</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +251,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Push" />
     <MESSAGE value="README" />
-    <option name="LAST_COMMIT_MESSAGE" value="README" />
+    <MESSAGE value="README Edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="README Edit" />
   </component>
 </project>
