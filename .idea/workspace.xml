@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="" />
+    <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +166,7 @@
       <updated>1566176892686</updated>
       <workItem from="1566176893808" duration="3102000" />
       <workItem from="1566200938513" duration="41000" />
-      <workItem from="1566201193546" duration="809000" />
+      <workItem from="1566201193546" duration="1048000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <created>1566200814482</created>
@@ -194,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566201794564</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="README">
+      <created>1566202218548</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566202218548</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +242,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Push" />
+    <MESSAGE value="README" />
+    <option name="LAST_COMMIT_MESSAGE" value="README" />
   </component>
 </project>
