@@ -11,7 +11,7 @@
             </li>
 
         <li class="list-group-item">
-            <a href="">Suppliers</a>
+            <a href="{{ route('suppliers.index') }}">Suppliers</a>
         </li>
         <li class="list-group-item">
             <a href="">Products</a>

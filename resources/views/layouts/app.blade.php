@@ -41,6 +41,9 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('home') }}">About</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('suppliers.index') }}">Suppliers</a>
                             </li>
                             <li class="nav-item">
@@ -76,13 +79,28 @@
         </nav>
 
         <main class="py-4">
+                <div class="container">
+                    @if(session()->has('success'))
+                        <div class="alert alert-success">
+                            {{ session()->get('success') }}
+                        </div>
+                    @endif
+                    @if(session()->has('error'))
+                        <div class="alert alert-danger">
+                            {{ session()->get('error') }}
+                        </div>
+            @endif
             @yield('content')
+                </div>
         </main>
         <div class="footer">
             <footer>
                 @include('includes.footer')
             </footer>
         </div>
+    <!-- Scripts -->
+
+    @yield('scripts')
     </div>
 </body>
 </html>
