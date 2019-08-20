@@ -24,6 +24,6 @@ Created by Trevor Tanner
 <br><br>
 All code written by Trevor Tanner using JetBrains PHPStorm
 
-##### Email me @ trevtanner@gmail.com if you have any other questions
+##### Email me @ trevor.tanner.developer@gmail.com if you have any other questions
 
 MIT © Trevor Tanner
