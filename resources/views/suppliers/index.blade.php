@@ -29,9 +29,9 @@
                             <td></td>
                             <td class="d-flex justify-content-end">
                                 <div class="pr-2">
-                                <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-info btn-sm">
-                                    Edit
-                                </a>
+                                        <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-info btn-sm">
+                                            Edit
+                                        </a>
                                 </div>
                                 <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $supplier->id }})">Delete</button>
                             </td>
@@ -74,11 +74,6 @@
         </div>
 
     </card>
-    </div>
-        <div class="col-md-4">
-        @include('includes.authsidebar')
-    </div>
-        </div>
     </div>
 
 

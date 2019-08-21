@@ -3,6 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row">
+        <div class="d-flex col-md-4">
+            @include('includes.supplierssidebar')
+        </div>
             <div class="col-md-8">
                 <card class="card-default">
                     <div class="card-header">
@@ -28,9 +31,17 @@
                 </div>
                 </card>
             </div>
-            <div class="col-md-4">
-                @include('includes.authsidebar')
-            </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+
+    <script>
+        function handleDelete(id) {
+            var form = document.getElementById('deleteSupplierForm');
+            form.action = '/suppliers/' + id;
+            $('#deleteModel').modal('show');
+        }
+    </script>
 @endsection

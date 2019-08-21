@@ -26,7 +26,7 @@ class SuppliersController extends Controller
      */
     public function create()
     {
-        return view('suppliers.create');
+        return view('suppliers.create')->with('suppliers', Supplier::all());
     }
 
     /**
@@ -44,7 +44,7 @@ class SuppliersController extends Controller
 
         session()->flash('success', 'Supplier created successfully.');
 
-        return redirect(route('suppliers.index'));
+        return redirect(route('suppliers.create'));
     }
 
     /**
@@ -66,7 +66,7 @@ class SuppliersController extends Controller
      */
     public function edit(Supplier $supplier)
     {
-        return view('suppliers.create')->with('supplier', $supplier);
+        return view('suppliers.create')->with('supplier', $supplier)->with('suppliers', Supplier::all());
     }
 
     /**
@@ -88,7 +88,7 @@ class SuppliersController extends Controller
 
         session()->flash('success', 'Supplier updated successfully.');
 
-        return redirect(route('suppliers.index'));
+        return redirect(route('suppliers.create'));
     }
 
     /**
@@ -110,6 +110,6 @@ class SuppliersController extends Controller
 
         session()->flash('success', 'Supplier deleted successfully');
 
-        return redirect(route('suppliers.index'));
+        return redirect(route('suppliers.create'));
     }
 }
