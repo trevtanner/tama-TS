@@ -34,14 +34,25 @@
                             </div>
                             {{--add checkboxes for size, all to start, then dynamic based on Main tag--}}
                             <div class="form-group">
-                                <label for="size">Product Size(if applicable):</label>
-                                <input type="text" id="size" class="form-control" name="size" value="{{ isset($product) ? $product->size : '' }}">
+                                <label>Product Size(if applicable):</label><br>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Small" name="sizes">
+                                    <label class="custom-control-label" for="Small">Small</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Medium" name="sizes">
+                                    <label class="custom-control-label" for="Medium">Medium</label>
+                                </div>
+                                <div class="custom-control custom-checkbox custom-control-inline">
+                                    <input type="checkbox" class="custom-control-input" id="Large" name="sizes">
+                                    <label class="custom-control-label" for="Large">Large</label>
+                                </div>
                             </div>
 
                             {{--add checkboxes for colors; red, green, yellow, etc--}}
                             <div class="form-group">
-                                <label for="size">Product Colors(if applicable):</label>
-                                <input type="text" id="size" class="form-control" name="size" value="{{ isset($product) ? $product->size : '' }}">
+                                <label for="colors">Product Colors(if applicable):</label>
+                                <input type="text" id="colors" class="form-control" name="colors" value="{{ isset($product) ? $product->size : '' }}">
                             </div>
 
                             {{--change to image input, look up how to add multiple images per product--}}

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateSupplierRequest;
-use App\Http\Requests\UpdateSupplierRequest;
+use App\Http\Requests\Suppliers\CreateSupplierRequest;
+use App\Http\Requests\Suppliers\UpdateSupplierRequest;
 use App\Supplier;
 use Illuminate\Http\Request;
 

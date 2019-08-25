@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateProductRequest;
-use App\Http\Requests\UpdateProductRequest;
+
+use App\Http\Requests\Products\CreateProductRequest;
+use App\Http\Requests\Products\UpdateProductRequest;
 use App\Product;
 use Illuminate\Http\Request;
 
@@ -43,8 +44,8 @@ class ProductsController extends Controller
             'image' => $request->image,
             'shortdescript' => $request->shortdescript,
             'longdescript' => $request->longdescript  ,
-            'size' => $request->size,
-            'color' => $request->color,
+            'sizes' => $request->sizes,
+            'colors' => $request->colors,
         ]);
 
         session()->flash('success', 'Product created successfully.');
