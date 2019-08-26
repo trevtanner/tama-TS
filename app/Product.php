@@ -12,6 +12,7 @@ class Product extends Model
         'shortdescript',
         'longdescript',
         'image' ,
+        'supplier_id',
     ];
 
     public function category()

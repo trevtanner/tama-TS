@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../startbootstrap-shop-homepage-gh-pages/.idea/startbootstrap-shop-homepage-gh-pages.iml" filepath="$PROJECT_DIR$/../startbootstrap-shop-homepage-gh-pages/.idea/startbootstrap-shop-homepage-gh-pages.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tama-team-sports.iml" filepath="$PROJECT_DIR$/.idea/tama-team-sports.iml" />
     </modules>
   </component>
