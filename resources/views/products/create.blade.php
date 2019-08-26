@@ -13,7 +13,7 @@
                     </div>
                     <div class="card-body">
                         @include('partials.errors')
-                        <form action="{{ isset($product) ? route('products.update', $product->id) : route('products.store') }}" method="POST">
+                        <form action="{{ isset($product) ? route('products.update', $product->id) : route('products.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @if(isset($product))
                                 @method('PUT')
@@ -30,36 +30,87 @@
                             {{--Add text edit similar to cms project--}}
                             <div class="form-group">
                                 <label for="longdescript">Product Long Description:</label>
-                                <input type="text" id="longdescript" class="form-control" name="longdescript" value="{{ isset($product) ? $product->longdescript : '' }}">
-                            </div>
-                            {{--add checkboxes for size, all to start, then dynamic based on Main tag--}}
-                            <div class="form-group">
-                                <label>Product Size(if applicable):</label><br>
-                                <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Small" name="sizes">
-                                    <label class="custom-control-label" for="Small">Small</label>
-                                </div>
-                                <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Medium" name="sizes">
-                                    <label class="custom-control-label" for="Medium">Medium</label>
-                                </div>
-                                <div class="custom-control custom-checkbox custom-control-inline">
-                                    <input type="checkbox" class="custom-control-input" id="Large" name="sizes">
-                                    <label class="custom-control-label" for="Large">Large</label>
-                                </div>
-                            </div>
+                                <input type="hidden" id="longdescript" name="longdescript" value="{{ isset($product) ? $product->longdescript : '' }}">
+                                <trix-editor input="longdescript"></trix-editor>
 
-                            {{--add checkboxes for colors; red, green, yellow, etc--}}
-                            <div class="form-group">
-                                <label for="colors">Product Colors(if applicable):</label>
-                                <input type="text" id="colors" class="form-control" name="colors" value="{{ isset($product) ? $product->size : '' }}">
                             </div>
+                            @if(isset($product))
+                                <div class="form-group">
+                                    <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 100%">
+                                </div>
+                            @endif
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control-file" name="image" id="image">
+                            </div>
+                            <div class="form-group">
+                                <label for="supplier">Supplier</label>
+                                <select name="supplier" id="supplier" class="form-control">
+                                    @foreach($suppliers as $supplier)
+                                        <option value="{{ $supplier->id }}"
+                                                @if(isset($product))
+                                                @if($supplier->id === $product->supplier_id)
+                                                selected
+                                                @endif
+                                                @endif
 
-                            {{--change to image input, look up how to add multiple images per product--}}
-                            <div class="form-group">
-                                <label for="image">Image:</label>
-                                <input type="text" id="image" class="form-control" name="image" value="{{ isset($product) ? $product->image : '' }}">
+                                        >{{ $supplier->name }}</option>
+
+
+                                    @endforeach
+                                </select>
                             </div>
+                            @if($tags->count() > 0)
+                                <div class="form-group">
+                                    <label for="tags">Sizes</label>
+                                    <select name="tags[]" id="tags" class="form-control tagselector" multiple>
+                                        @foreach($tags as $tag)
+                                            <option value="{{ $tag->id }}"
+                                                    @if(isset($product))
+                                                    @if($product->hasTag($tag->id)))
+                                                    selected
+                                                    @endif
+                                                    @endif
+                                            >
+                                                {{ $tag->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endif
+                            @if($sizes->count() > 0)
+                                <div class="form-group">
+                                    <label for="sizes">Tags</label>
+                                    <select name="sizes[]" id="sizes" class="form-control tagselector" multiple>
+                                        @foreach($sizes as $size)
+                                            <option value="{{ $size->id }}"
+                                                    @if(isset($product))
+                                                    @if($product->hasTag($size->id)))
+                                                    selected
+                                                    @endif
+                                                    @endif
+                                            >
+                                                {{ $size->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endif
+                            @if($colors->count() > 0)
+                                <div class="form-group">
+                                    <label for="colors">Colors</label>
+                                    <select name="colors[]" id="colors" class="form-control tagselector" multiple>
+                                        @foreach($colors as $color)
+                                            <option value="{{ $color->id }}"
+                                                    @if(isset($product))
+                                                    @if($product->hasTag($color->id)))
+                                                    selected
+                                                    @endif
+                                                    @endif
+                                            >
+                                                {{ $color->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <button class="btn btn-success">
                                     {{ isset($product) ? 'Update Product' : 'Add Product' }}
@@ -75,11 +126,24 @@
 
 @section('scripts')
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
+
     <script>
+
         function handleDelete(id) {
             var form = document.getElementById('deleteProductForm');
             form.action = '/products/' + id;
             $('#deleteModel').modal('show');
         }
     </script>
+@endsection
+
+@section('css')
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+
 @endsection

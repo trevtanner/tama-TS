@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 
+use App\Color;
 use App\Http\Requests\Products\CreateProductRequest;
 use App\Http\Requests\Products\UpdateProductRequest;
 use App\Product;
+use App\Size;
+use App\Supplier;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -27,7 +31,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('products.create');
+        return view('products.create')->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('sizes', Size::all())->with('colors', Color::all());
     }
 
     /**
@@ -38,15 +42,25 @@ class ProductsController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
+        $image = $request->image->store('products');
 
-        Product::create([
+       $product = Product::create([
             'title' => $request->title,
-            'image' => $request->image,
+            'image' => $image,
             'shortdescript' => $request->shortdescript,
-            'longdescript' => $request->longdescript  ,
-            'sizes' => $request->sizes,
-            'colors' => $request->colors,
+            'longdescript' => $request->longdescript,
+            'supplier_id' => $request->supplier,
+
         ]);
+        if($request->tags){
+            $product->tags()->attach($request->tags);
+        }
+        if($request->colors){
+            $product->tags()->attach($request->colors);
+        }
+        if($request->sizes){
+            $product->tags()->attach($request->sizes);
+        }
 
         session()->flash('success', 'Product created successfully.');
 
@@ -73,7 +87,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.create')->with('product', $product);
+        return view('products.create')->with('product', $product)->with('suppliers', Supplier::all())->with('sizes', Size::all())->with('colors', Color::all())->with('tags', Tag::all());
     }
 
     /**
@@ -85,13 +99,31 @@ class ProductsController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        $product->update([
 
-            'name' => $request->name
+        $data = $request->only(['title', 'description', 'published_at', 'content']);
 
-        ]);
+        if ($request->hasFile('image')){
 
-        $product->save();
+            $image = $request->image->store('products');
+
+            $product->deleteImage();
+
+            $data['image'] = $image;
+        }
+
+        if ($request->tags){
+            $product->tags()->sync($request->tags);
+        }
+
+        if ($request->colors){
+            $product->colors()->sync($request->colors);
+        }
+
+        if ($request->sizes){
+            $product->sizes()->sync($request->sizes);
+        }
+
+        $product->update($data);
 
         session()->flash('success', 'Product updated successfully.');
 

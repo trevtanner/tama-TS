@@ -27,7 +27,8 @@ class CreateProductRequest extends FormRequest
             'title'=> 'required',
             'shortdescript'=> 'required',
             'longdescript'=> 'required',
-            'image' => 'required',
+            'image' => 'required|image',
+            'supplier' => 'required',
         ];
     }
 }
