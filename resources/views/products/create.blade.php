@@ -30,8 +30,7 @@
                             {{--Add text edit similar to cms project--}}
                             <div class="form-group">
                                 <label for="longdescript">Product Long Description:</label>
-                                <input type="hidden" id="longdescript" name="longdescript" value="{{ isset($product) ? $product->longdescript : '' }}">
-                                <trix-editor input="longdescript"></trix-editor>
+                                <textarea name="longdescript" id="longdescript" cols="20" rows="10" class="form-control">{{ isset($product) ? $product->longdescript : '' }}</textarea>
 
                             </div>
                             @if(isset($product))
@@ -62,7 +61,7 @@
                             </div>
                             @if($tags->count() > 0)
                                 <div class="form-group">
-                                    <label for="tags">Sizes</label>
+                                    <label for="tags">Tags</label>
                                     <select name="tags[]" id="tags" class="form-control tagselector" multiple>
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}"
@@ -79,7 +78,7 @@
                             @endif
                             @if($sizes->count() > 0)
                                 <div class="form-group">
-                                    <label for="sizes">Tags</label>
+                                    <label for="sizes">Sizes</label>
                                     <select name="sizes[]" id="sizes" class="form-control tagselector" multiple>
                                         @foreach($sizes as $size)
                                             <option value="{{ $size->id }}"
@@ -136,7 +135,13 @@
             var form = document.getElementById('deleteProductForm');
             form.action = '/products/' + id;
             $('#deleteModel').modal('show');
+
         }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.tagselector').select();
+        });
     </script>
 @endsection
 

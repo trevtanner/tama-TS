@@ -89,5 +89,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="startbootstrap-shop-homepage-gh-pages" />
+    <orderEntry type="module" module-name="cms" />
+    <orderEntry type="module" module-name="udemy-course-ecommerce-templates-files-master" />
   </component>
 </module>

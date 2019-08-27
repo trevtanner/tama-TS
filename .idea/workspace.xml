@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/products/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ColorsTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SizesTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SuppliersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/TagsTableSeeder.php" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/Laravel/freeCodeGram-master/cms/database/seeds/PostsTableSeeder.php" beforeDir="false" afterPath="$USER_HOME$/Desktop/Laravel/freeCodeGram-master/cms/database/seeds/PostsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/tama-team-sports.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tama-team-sports.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_20_034913_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_034913_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_26_035143_create_product_color_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_26_231206_create_color_product_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/show.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,12 +151,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1PdPqFJQsrq7uCDKZmEbrGl76aB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../startbootstrap-shop-homepage-gh-pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../udemy-course-ecommerce-templates-files-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -167,9 +170,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\storage\app\public" />
+      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\public\storage" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\resources\views\products" />
       <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\resources\views\includes" />
@@ -208,7 +215,7 @@
       <workItem from="1566200938513" duration="41000" />
       <workItem from="1566201193546" duration="503000" />
       <workItem from="1566203168850" duration="2525000" />
-      <workItem from="1566836719318" duration="6492000" />
+      <workItem from="1566836719318" duration="16388000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <created>1566200814482</created>
@@ -245,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566371699547</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added template and product show page">
+      <created>1566852203518</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566852203518</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,10 +307,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Push" />
     <MESSAGE value="README update" />
     <MESSAGE value="Created: supplier and product sidebar, product create/edit and requests&#10;Updated: footer, suppliers redirects, suppliers and products controllers&#10;Todo: finish product create/edit form, displaying products, add main and secondary tag functionality" />
     <MESSAGE value="Created: supplier and product sidebar, product create/edit and requests&#10;                                                                                                    Updated: footer, suppliers redirects, suppliers and products controllers&#10;                                                                                                    Todo: finish product create/edit form, displaying products, add main and secondary tag functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created: supplier and product sidebar, product create/edit and requests&#10;                                                                                                    Updated: footer, suppliers redirects, suppliers and products controllers&#10;                                                                                                    Todo: finish product create/edit form, displaying products, add main and secondary tag functionality" />
+    <MESSAGE value="Added template and product show page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added template and product show page" />
   </component>
 </project>

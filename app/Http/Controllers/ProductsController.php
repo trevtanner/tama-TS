@@ -21,7 +21,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index')->with('products', Product::all());
+        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('sizes', Size::all())->with('colors', Color::all());
     }
 
     /**
@@ -42,7 +42,7 @@ class ProductsController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
-        $image = $request->image->store('products');
+        $image = $request->image->store('public/products');
 
        $product = Product::create([
             'title' => $request->title,
@@ -56,10 +56,10 @@ class ProductsController extends Controller
             $product->tags()->attach($request->tags);
         }
         if($request->colors){
-            $product->tags()->attach($request->colors);
+            $product->colors()->attach($request->colors);
         }
         if($request->sizes){
-            $product->tags()->attach($request->sizes);
+            $product->sizes()->attach($request->sizes);
         }
 
         session()->flash('success', 'Product created successfully.');
@@ -76,7 +76,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        return view('products.show');
+        return view('products.show', ['product' => Product::find($id)])->with('suppliers', Supplier::all());
     }
 
     /**
