@@ -92,7 +92,7 @@
                 <h6 class="text-uppercase font-weight-bold">Links</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#!">Products</a>
+                    <a href="{{ route('products.index') }}">Products</a>
                 </p>
                 <p>
                     <a href="#!">Suppliers</a>
@@ -104,7 +104,7 @@
                     <a href="#!">Add Supplier</a>
                 </p>
                 <p>
-                    <a href="#!">Add Product</a>
+                    <a href="{{ route('products.create') }}">Add Product</a>
                 </p>
 
             </div>
@@ -121,9 +121,7 @@
                 <p>
                     <i class="fas fa-envelope mr-3"></i>info@example.com</p>
                 <p>
-                    <i class="fas fa-phone mr-3"></i>+ 01 234 567 88</p>
-                <p>
-                    <i class="fas fa-print mr-3"></i>+ 01 234 567 89</p>
+                    <i class="fas fa-phone mr-3"></i>1-719-528-8262 </p>
 
             </div>
             <!-- Grid column -->

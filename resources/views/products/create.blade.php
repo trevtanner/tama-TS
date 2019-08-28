@@ -3,10 +3,8 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="d-flex col-md-4">
-                @include('includes.productsidebar')
-            </div>
-            <div class="col-md-8">
+                @include('includes.tagssidebar')
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pb-4 pt-4">
                 <card class="card-default">
                     <div class="card-header">
                         {{ isset($product) ? 'Edit Product' : 'Create Product' }}

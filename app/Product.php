@@ -15,7 +15,7 @@ class Product extends Model
         'supplier_id',
     ];
 
-    public function category()
+    public function supplier()
     {
         return $this->belongsTo(Supplier::class);
     }

@@ -35,20 +35,7 @@
 
                     <div class="row">
 
-                        <div class="col-lg-3">
-
-                            <h1 class="my-4">Products Overview</h1>
-                            <div class="list-group">
-                                <a href="#" class="list-group-item">Apparel</a>
-                                <a href="#" class="list-group-item">Backpacks</a>
-                                <a href="#" class="list-group-item">Hats</a>
-                                <a href="#" class="list-group-item">Drinkware</a>
-                                <a href="#" class="list-group-item">Accessories</a>
-                                <a href="#" class="list-group-item">Miscellaneous</a>
-                            </div>
-
-                        </div>
-                        <!-- /.col-lg-3 -->
+                    @include('includes.tagssidebar')
 
                         <div class="col-lg-9">
 
@@ -89,9 +76,13 @@
                                             <h4 class="card-title">
                                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>
                                             </h4>
-                                            <h5>{{ $product->supplier_id }}</h5>
+                                            <h5>{{ $product->supplier->name }}</h5>
 
                                             <p class="card-text">{{ $product->shortdescript }}</p>
+                                            <hr>
+                                            @foreach ($product->tags as $tag)
+                                                <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
+                                                @endforeach
                                         </div>
                                     </div>
                                 </div>

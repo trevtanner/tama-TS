@@ -74,9 +74,9 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        return view('products.show', ['product' => Product::find($id)])->with('suppliers', Supplier::all());
+        return view('products.show')->with('product', $product)->with('tags', Tag::all());
     }
 
     /**
@@ -151,5 +151,11 @@ class ProductsController extends Controller
         session()->flash('success', 'Product deleted successfully');
 
         return redirect(route('products.index'));
+    }
+
+
+    public function tag(Tag $tag)
+    {
+        return view('products.index')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all());
     }
 }

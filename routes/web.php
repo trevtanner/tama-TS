@@ -19,5 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
 Route::resource('suppliers', 'SuppliersController');
 Route::resource('products', 'ProductsController');
+
+Route::get('/category/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
