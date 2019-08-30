@@ -1,5 +1,9 @@
+<!--Header-->
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
+    
+    <!--Left side With App Name-->
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
         </a>
