@@ -156,6 +156,6 @@ class ProductsController extends Controller
 
     public function tag(Tag $tag)
     {
-        return view('products.index')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all());
+        return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all());
     }
 }

@@ -1,10 +1,13 @@
 @extends('layouts.app')
+@section('title')
+    <title>{{ $product->title }}-Tama Team Sports</title>
+@endsection
 @section('content')
     <div class="container">
-        @include('includes.productsidebar')
         <div class="row medium-padding120">
-            <div class="product-details">
-                <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12 pb-4">
+            @include('includes.productsidebar')
+            <div class="product-details col-lg-8 col-md-8 col-sm-12 col-xs-12 d-flex">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pt-5">
                     <div class="product-details-thumb">
                         <div class="swiper-container" data-effect="fade">
                         <!-- Additional required wrapper -->
@@ -19,9 +22,7 @@
                     </div>
                 </div>
 
-
-                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-                    <div class="product-details-info">
+                    <div class="product-details-info col-lg-6 col-md-4 col-sm-6 col-xs-6 pb-4 pt-5">
                         <h3 class="product-details-info-title">{{ $product->title }}</h3>
                         <br>
                         <h4>Supplier:</h4>
@@ -57,7 +58,6 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection
 
 @section('css')

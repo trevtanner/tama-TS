@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    <title>Products-Tama Team Sports</title>
+@endsection
 @section('content')
 {{--
                 <!-- Navigation -->
@@ -37,7 +39,7 @@
 
                     @include('includes.tagssidebar')
 
-                        <div class="col-lg-9">
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
                             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                                 <ol class="carousel-indicators">
