@@ -13,6 +13,7 @@ class Product extends Model
         'longdescript',
         'image' ,
         'supplier_id',
+        'productnumber'
     ];
 
     public function supplier()

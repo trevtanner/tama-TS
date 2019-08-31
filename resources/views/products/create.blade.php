@@ -23,6 +23,10 @@
                                 <input type="text" id="title" class="form-control" name="title" value="{{ isset($product) ? $product->title : '' }}">
                             </div>
                             <div class="form-group">
+                                <label for="productnumber">Product #:</label>
+                                <input type="text" id="productnumber" class="form-control" name="productnumber" value="{{ isset($product) ? $product->productnumber : '' }}">
+                            </div>
+                            <div class="form-group">
                                 <label for="shortdescript">Product Short Description:</label>
                                 <input type="text" id="shortdescript" class="form-control" name="shortdescript" value="{{ isset($product) ? $product->shortdescript : '' }}">
                             </div>
@@ -39,11 +43,11 @@
                                 </div>
                             @endif
                             <div class="form-group">
-                                <label for="image">Image</label>
+                                <label for="image">Image:</label>
                                 <input type="file" class="form-control-file" name="image" id="image">
                             </div>
                             <div class="form-group">
-                                <label for="supplier">Supplier</label>
+                                <label for="supplier">Supplier:</label>
                                 <select name="supplier" id="supplier" class="form-control">
                                     @foreach($suppliers as $supplier)
                                         <option value="{{ $supplier->id }}"
@@ -61,7 +65,7 @@
                             </div>
                             @if($tags->count() > 0)
                                 <div class="form-group">
-                                    <label for="tags">Tags</label>
+                                    <label for="tags">Category:</label>
                                     <select name="tags[]" id="tags" class="form-control tagselector" multiple>
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}"
@@ -72,40 +76,6 @@
                                                     @endif
                                             >
                                                 {{ $tag->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            @endif
-                            @if($sizes->count() > 0)
-                                <div class="form-group">
-                                    <label for="sizes">Sizes</label>
-                                    <select name="sizes[]" id="sizes" class="form-control tagselector" multiple>
-                                        @foreach($sizes as $size)
-                                            <option value="{{ $size->id }}"
-                                                    @if(isset($product))
-                                                    @if($product->hasTag($size->id)))
-                                                    selected
-                                                    @endif
-                                                    @endif
-                                            >
-                                                {{ $size->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            @endif
-                            @if($colors->count() > 0)
-                                <div class="form-group">
-                                    <label for="colors">Colors</label>
-                                    <select name="colors[]" id="colors" class="form-control tagselector" multiple>
-                                        @foreach($colors as $color)
-                                            <option value="{{ $color->id }}"
-                                                    @if(isset($product))
-                                                    @if($product->hasTag($color->id)))
-                                                    selected
-                                                    @endif
-                                                    @endif
-                                            >
-                                                {{ $color->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

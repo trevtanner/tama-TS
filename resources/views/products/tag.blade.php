@@ -43,23 +43,24 @@
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="row">
 
-
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
                                 <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                 <div class="card-body">
-                                    <h4 class="card-title">
+                                    <h5 class="card-title">
                                         <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>
-                                    </h4>
-                                    <h5>{{ $product->supplier->name }}</h5>
+                                    </h5>
+
+                                    <p class="card-text">{{ $product->productnumber }}</p>
 
                                     <p class="card-text">{{ $product->shortdescript }}</p>
                                     <hr>
-                                    @foreach ($product->tags as $tags)
-                                        <a href="{{ route('tag', $tag->id) }}" class="list-group-item">{{ $tag->name }}</a>
-                                    @endforeach
+                                    {{ $product->supplier->name }}
                                 </div>
+                                <div class="card-footer">@foreach ($product->tags as $tag)
+                                        <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
+                                    @endforeach</div>
                             </div>
                         </div>
                     @endforeach

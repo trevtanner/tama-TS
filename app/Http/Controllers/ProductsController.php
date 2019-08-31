@@ -21,7 +21,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('sizes', Size::all())->with('colors', Color::all());
+        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all());
     }
 
     /**
@@ -31,7 +31,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('products.create')->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('sizes', Size::all())->with('colors', Color::all());
+        return view('products.create')->with('suppliers', Supplier::all())->with('tags', Tag::all());
     }
 
     /**
@@ -44,28 +44,23 @@ class ProductsController extends Controller
     {
         $image = $request->image->store('public/products');
 
-       $product = Product::create([
+        $product = Product::create([
             'title' => $request->title,
             'image' => $image,
             'shortdescript' => $request->shortdescript,
             'longdescript' => $request->longdescript,
             'supplier_id' => $request->supplier,
+            'productnumber' => $request->productnumber,
 
         ]);
-        if($request->tags){
+        if ($request->tags) {
             $product->tags()->attach($request->tags);
-        }
-        if($request->colors){
-            $product->colors()->attach($request->colors);
-        }
-        if($request->sizes){
-            $product->sizes()->attach($request->sizes);
-        }
 
-        session()->flash('success', 'Product created successfully.');
+            session()->flash('success', 'Product created successfully.');
 
-        return redirect(route('products.index'));
-        /*TODO: redirect to created product*/
+            return redirect(route('products.index'));
+            /*TODO: redirect to created product*/
+        }
     }
 
     /**
@@ -87,7 +82,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.create')->with('product', $product)->with('suppliers', Supplier::all())->with('sizes', Size::all())->with('colors', Color::all())->with('tags', Tag::all());
+        return view('products.create')->with('product', $product)->with('suppliers', Supplier::all())->with('tags', Tag::all());
     }
 
     /**
@@ -100,7 +95,7 @@ class ProductsController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
 
-        $data = $request->only(['title', 'description', 'published_at', 'content']);
+        $data = $request->only(['title', 'shortdescript', 'longdescript', 'supplier', 'productnumber']);
 
         if ($request->hasFile('image')){
 
@@ -115,13 +110,6 @@ class ProductsController extends Controller
             $product->tags()->sync($request->tags);
         }
 
-        if ($request->colors){
-            $product->colors()->sync($request->colors);
-        }
-
-        if ($request->sizes){
-            $product->sizes()->sync($request->sizes);
-        }
 
         $product->update($data);
 

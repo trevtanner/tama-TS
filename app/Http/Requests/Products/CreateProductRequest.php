@@ -29,6 +29,7 @@ class CreateProductRequest extends FormRequest
             'longdescript'=> 'required',
             'image' => 'required|image',
             'supplier' => 'required',
+            'productnumber' => 'required',
         ];
     }
 }

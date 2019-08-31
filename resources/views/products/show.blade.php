@@ -29,6 +29,10 @@
                         <p class="product-details-info-text">
                             {{ $product->supplier->name }}
                         </p>
+                        <h5>Product #:</h5>
+                        <p class="product-details-info-text">
+                            {{ $product->productnumber }}
+                        </p>
                         <br>
                         <p class="product-details-info-text">{{ $product->shortdescript }}</p>
                         <h4>Description:</h4>
