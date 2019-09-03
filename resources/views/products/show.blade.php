@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $product->title }}-Tama Team Sports</title>
+    <title>{{ $product->title }} - Tama Team Sports</title>
 @endsection
 @section('content')
     <div class="container">
@@ -25,7 +25,7 @@
                     <div class="product-details-info col-lg-6 col-md-4 col-sm-6 col-xs-6 pb-4 pt-5">
                         <h3 class="product-details-info-title">{{ $product->title }}</h3>
                         <br>
-                        <h4>Supplier:</h4>
+                        <h5>Supplier:</h5>
                         <p class="product-details-info-text">
                             {{ $product->supplier->name }}
                         </p>
@@ -35,24 +35,18 @@
                         </p>
                         <br>
                         <p class="product-details-info-text">{{ $product->shortdescript }}</p>
-                        <h4>Description:</h4>
+                        <h5>Description:</h5>
                         <p class="product-details-info-text">{{ $product->longdescript }}</p>
                         <br>
-                        <h4>Sizes:</h4>
-                        <p class="product-details-info-text">
-                        @foreach ($product->sizes as $size)
-                                {{ $size->name }}
-                            @endforeach
-                        </p>
-                        <h4>Colors:</h4>
-                        <p class="product-details-info-text">
-                        @foreach ($product->colors as $color)
-                                {{ $color->name }}
-                            @endforeach
-                        </p>
+                        <h5>Category:</h5>
                         <p class="product-details-info-text">
                             @foreach ($product->tags as $tag)
                                 <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
+                            @endforeach
+                        </p>
+                        <p class="product-details-info-text">
+                            @foreach ($product->subcateories as $subcategories)
+                                <a href="">{{ $subcategories->name }}</a>
                             @endforeach
                         </p>
 

@@ -1,7 +1,8 @@
-TODO: ALL PRODUCT PAGES
-TODO: CONNECT PRODUCTS AND SUPPLIERS
-TODO: TAGS FUNCTIONALITY
+TODO: FINISH HOMEPAGE LAYOUT
+TODO: CLOSE ERROR WHERE DELETING SUPPLIER BROKE APP WHEN GOING TO PRODUCT PAGES THAT PULL DELETED SUPPLIER
+TODO: FIX IMAGE DISPLAY FOR PRODUCTS
 TODO: LOOK UP STOREFRONT THEME
+
 
 |        | GET|HEAD  | products                  | products.index    | App\Http\Controllers\ProductsController@index                          | web          |
 |        | POST      | products                  | products.store    | App\Http\Controllers\ProductsController@store                          | web          |

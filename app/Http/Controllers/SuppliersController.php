@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Suppliers\CreateSupplierRequest;
 use App\Http\Requests\Suppliers\UpdateSupplierRequest;
 use App\Supplier;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class SuppliersController extends Controller
@@ -16,7 +17,7 @@ class SuppliersController extends Controller
      */
     public function index()
     {
-        return view('suppliers.index')->with('suppliers', Supplier::all());
+        return view('suppliers.index')->with('suppliers', Supplier::all())->with('tags', Tag::all());
     }
 
     /**

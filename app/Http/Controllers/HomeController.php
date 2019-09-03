@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('home')->with('tags', Tag::all());
+    }
+
+    public function imprint()
+    {
+        return view('imprint')->with('tags', Tag::all());
+    }
+
+    public function faq()
+    {
+        return view('faq')->with('tags', Tag::all());
+    }
+
+    public function contact()
+    {
+        return view('contact')->with('tags', Tag::all());
     }
 }

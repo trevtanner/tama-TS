@@ -64,22 +64,22 @@
                 <h6 class="text-uppercase font-weight-bold">Products</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <a href="#!">Apparel</a>
+                    <a href="{{route('tag', 1)}}">Apparel</a>
                 </p>
                 <p>
-                    <a href="#!">Backpacks</a>
+                    <a href="{{route('tag', 2)}}">Backpacks</a>
                 </p>
                 <p>
-                    <a href="#!">Hats</a>
+                    <a href="{{route('tag', 3)}}">Hats</a>
                 </p>
                 <p>
-                    <a href="#!">Drinkware</a>
+                    <a href="{{route('tag', 4)}}">Drinkware</a>
                 </p>
                 <p>
-                    <a href="#!">Accessories</a>
+                    <a href="{{route('tag', 5)}}">Accessories</a>
                 </p>
                 <p>
-                    <a href="#!">Miscellaneous</a>
+                    <a href="{{route('tag', 6)}}">Miscellaneous</a>
                 </p>
 
             </div>
@@ -95,18 +95,32 @@
                     <a href="{{ route('products.index') }}">Products</a>
                 </p>
                 <p>
-                    <a href="#!">Suppliers</a>
+                    <a href="{{ route('suppliers.index') }}">Suppliers</a>
                 </p>
                 <p>
-                    <a href="#!">Login</a>
+                    <a href="{{ route('imprint') }}">Imprint Information</a>
                 </p>
                 <p>
-                    <a href="#!">Add Supplier</a>
+                    <a href="{{ route('faq') }}">FAQ</a>
+                </p>
+                <p>
+                    <a href="{{ route('contact') }}">Contact Us</a>
+                </p>
+                @if(auth()->user())
+
+                @else
+                <p>
+                    <a href="{{'login'}}">Login</a>
+                </p>
+                @endif
+                @if(auth()->user())
+                <p>
+                    <a href="{{route('suppliers.create')}}">Add Supplier</a>
                 </p>
                 <p>
                     <a href="{{ route('products.create') }}">Add Product</a>
                 </p>
-
+                @endif
             </div>
             <!-- Grid column -->
 
@@ -117,11 +131,11 @@
                 <h6 class="text-uppercase font-weight-bold">Contact</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
                 <p>
-                    <i class="fas fa-home mr-3"></i>Colorado Springs, CO 80908</p>
+                    <i class="fas fa-home mr-3">Colorado Springs, CO 80908</i></p>
                 <p>
-                    <i class="fas fa-envelope mr-3"></i>info@example.com</p>
+                    <i class="fas fa-envelope mr-3">info@example.com</i></p>
                 <p>
-                    <i class="fas fa-phone mr-3"></i>1-719-528-8262 </p>
+                    <i class="fas fa-phone mr-3">1-719-528-8262</i></p>
 
             </div>
             <!-- Grid column -->
@@ -133,8 +147,8 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 text-white">© <?php echo date("Y"); ?> Copyright:
-        <a href="#">Tama Team Sports</a>
+    <div class="footer-copyright text-center py-3 text-white">© <?php echo date("Y"); ?> Copyright
+        <a href="{{ route('home') }}"> Tama Team Sports</a>
     </div>
     <!-- Copyright -->
 <!-- Footer -->

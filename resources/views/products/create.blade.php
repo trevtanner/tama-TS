@@ -70,12 +70,29 @@
                                         @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}"
                                                     @if(isset($product))
-                                                    @if($product->hasTag($tag->id)))
+                                                    @if($product->hasTag($tag->id))
                                                     selected
                                                     @endif
                                                     @endif
                                             >
                                                 {{ $tag->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            @endif
+                            @if($subcategories->count() > 0)
+                                <div class="form-group">
+                                    <label for="tags">Sub-Category:</label>
+                                    <select name="tags[]" id="tags" class="form-control tagselector" multiple>
+                                        @foreach($subcategories as $subcategory)
+                                            <option value="{{ $subcategory->id }}"
+                                                    @if(isset($product))
+                                                    @if($product->hasTag($subcategory->id))
+                                                    selected
+                                                    @endif
+                                                    @endif
+                                            >
+                                                {{ $subcategory->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

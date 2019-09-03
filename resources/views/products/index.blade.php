@@ -40,7 +40,9 @@
                     @include('includes.tagssidebar')
 
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-
+                            <div class="text-center pt-4">
+                                <h1>Product Overview</h1>
+                            </div>
                             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -72,7 +74,7 @@
 
                                 @foreach ($products as $product)
                                 <div class="col-lg-4 col-md-6 mb-4">
-                                    <div class="card h-100">
+                                    <div class="card h-100 w-100">
                                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                                         <div class="card-body">
                                             <h5 class="card-title">

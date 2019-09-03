@@ -22,5 +22,8 @@ class SuppliersTableSeeder extends Seeder
         DB::table('suppliers')->insert([
             'name' => 'Allison'
         ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Sanmar'
+        ]);
     }
 }

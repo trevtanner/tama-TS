@@ -1,22 +1,26 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Tama Team Sports</title>
+    <title>FAQ - Tama Team Sports</title>
     @endsection
 
 @section('content')
-    <header class="masthead">
-    <div class="intro-text">
-        <div class="intro-lead-in">
-            <h1>Tama Team Sports</h1>
-        </div>
-        <div class="intro-heading text-uppercase">
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>FAQ</h1>
+    </div>
+    <br>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+            <p class="text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid autem habent admirationis, cum prope
                 accesseris? Quonam, inquit, modo? Eam tum adesse, cum dolor omnis absit; Si longus, levis dictata sunt.
+            </p>
         </div>
-    </div>
-    </header>
-        <div class="container">
+        </div>
+    <br>
+    <hr>
+    <br>
     <div class="row justify-content-center">
         <h4 class="text-center col-md-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quid ergo hoc loco intellegit honestum? Eam tum

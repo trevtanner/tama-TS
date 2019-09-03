@@ -15,7 +15,7 @@ class TagsTableSeeder extends Seeder
             'name' => 'Apparel'
         ]);
         DB::table('tags')->insert([
-            'name' => 'Backpacks'
+            'name' => 'Bags'
         ]);
         DB::table('tags')->insert([
             'name' => 'Hats'

@@ -8,6 +8,7 @@ use App\Http\Requests\Products\CreateProductRequest;
 use App\Http\Requests\Products\UpdateProductRequest;
 use App\Product;
 use App\Size;
+use App\Subcategory;
 use App\Supplier;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all());
+        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     /**
@@ -31,7 +32,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('products.create')->with('suppliers', Supplier::all())->with('tags', Tag::all());
+        return view('products.create')->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     /**
@@ -55,12 +56,16 @@ class ProductsController extends Controller
         ]);
         if ($request->tags) {
             $product->tags()->attach($request->tags);
+        }
+        if ($request->subcategories) {
+            $product->subcategories()->attach($request->subcategories);
+        }
 
             session()->flash('success', 'Product created successfully.');
 
             return redirect(route('products.index'));
             /*TODO: redirect to created product*/
-        }
+
     }
 
     /**
@@ -71,7 +76,7 @@ class ProductsController extends Controller
      */
     public function show(Product $product)
     {
-        return view('products.show')->with('product', $product)->with('tags', Tag::all());
+        return view('products.show')->with('product', $product)->with('tags', Tag::all())->with('subcategories', Subcategory::all())->with('supplier', Supplier::all());
     }
 
     /**
@@ -82,7 +87,7 @@ class ProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return view('products.create')->with('product', $product)->with('suppliers', Supplier::all())->with('tags', Tag::all());
+        return view('products.create')->with('product', $product)->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     /**
@@ -144,6 +149,6 @@ class ProductsController extends Controller
 
     public function tag(Tag $tag)
     {
-        return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all());
+        return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 }

@@ -33,7 +33,6 @@
                     </nav>--}}
 
     <!-- Page Content -->
-    <div class="container">
 
         <div class="row">
 
@@ -41,8 +40,11 @@
         <!-- /.col-lg-3 -->
 
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <div class="row">
-
+                <div class="container">
+                    <div class="text-center pt-4">
+                        <h1>{{$tag->name}}</h1>
+                    </div>
+                <div class="row pt-3">
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">

@@ -36,6 +36,11 @@ class Product extends Model
         return $this->belongsToMany(Color::class);
     }
 
+    public function subcategories()
+    {
+        return $this->belongsToMany(Subcategory::class);
+    }
+
     /**
 
      * Delete post image from storage
