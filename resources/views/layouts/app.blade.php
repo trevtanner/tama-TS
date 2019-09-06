@@ -20,15 +20,20 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="resources/css/app.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="css/shop-homepage.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
     @yield('css')
 </head>
 <body>
     <div id="app">
         @include('includes.header')
-        <main class="py-4">
-                <div class="container pb-4">
+        <main>
+            {{--    <div class="container pb-4">
                     @if(session()->has('success'))
                         <div class="alert alert-success">
                             {{ session()->get('success') }}
@@ -38,9 +43,9 @@
                         <div class="alert alert-danger">
                             {{ session()->get('error') }}
                         </div>
-            @endif
+                        @endif
+                </div>--}}
             @yield('content')
-                </div>
         </main>
         <div class="footer">
             <footer class="page-footer font-small unique-color-dark">

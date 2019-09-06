@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Suppliers\CreateSupplierRequest;
 use App\Http\Requests\Suppliers\UpdateSupplierRequest;
+use App\Product;
+use App\Subcategory;
 use App\Supplier;
 use App\Tag;
 use Illuminate\Http\Request;
@@ -54,7 +56,7 @@ class SuppliersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Supplier $supplier)
     {
         //
     }

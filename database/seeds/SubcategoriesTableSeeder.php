@@ -27,6 +27,9 @@ class SubcategoriesTableSeeder extends Seeder
             'name' => 'Backpack'
         ]);
         DB::table('subcategories')->insert([
+            'name' => 'Duffel Bag'
+        ]);
+        DB::table('subcategories')->insert([
             'name' => 'Snapback'
         ]);
         DB::table('subcategories')->insert([

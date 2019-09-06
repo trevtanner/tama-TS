@@ -33,22 +33,22 @@
                     </nav>--}}
 
     <!-- Page Content -->
-
+<div class="container">
         <div class="row">
 
         @include('includes.tagssidebar')
         <!-- /.col-lg-3 -->
 
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <div class="container">
-                    <div class="text-center pt-4">
+            <div class="col-lg-9">
+
+            <div class="text-center pt-4">
                         <h1>{{$tag->name}}</h1>
                     </div>
                 <div class="row pt-3">
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
-                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                                <a href="#"><img class="card-img-top" src="{{ asset('storage/' . $product->image) }}" alt=""></a>
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>
@@ -58,7 +58,7 @@
 
                                     <p class="card-text">{{ $product->shortdescript }}</p>
                                     <hr>
-                                    {{ $product->supplier->name }}
+                                    <a href="{{ route('supplier', $product->supplier->id) }}">{{ $product->supplier->name }}</a>
                                 </div>
                                 <div class="card-footer">@foreach ($product->tags as $tag)
                                         <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                     @endforeach
-
+                </div>
 
                 </div>
                 <!-- /.row -->
@@ -76,10 +76,6 @@
 
         </div>
         <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
 @endsection
 
 @section('scripts')

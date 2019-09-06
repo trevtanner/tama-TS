@@ -15,7 +15,7 @@ class Supplier extends Model
         'name'
     ];
 
-    public function posts()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }

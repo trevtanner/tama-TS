@@ -1,6 +1,6 @@
-<div class="col-lg-4 col-md-4 col-sm-12 d-none d-sm-block d-md-block d-xl-block">
+<div class="col-lg-3">
 
-    <h1 class="my-4">Categories</h1>
+    <h2 class="my-4 text-center">Products</h2>
     <div class="list-group">
         @foreach ($tags as $tag)
             <a href="{{ route('tag', $tag->id) }}" class="list-group-item">{{ $tag->name }}</a>

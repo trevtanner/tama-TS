@@ -125,7 +125,7 @@
                           <div class="card h-100 w-100">
                               <div class="card-head">
                                   <h5 class="card-title text-center pt-3 pb-1">
-                                      <a href="{{--{{ route('suppliers.show', $supplier->id) }}--}}">{{ $supplier->name }}</a>
+                                      <a href="{{ route('supplier', $supplier->id) }}">{{ $supplier->name }}</a>
                                   </h5>
                               </div>
                           </div>

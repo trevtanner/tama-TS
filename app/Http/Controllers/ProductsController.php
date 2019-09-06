@@ -12,6 +12,7 @@ use App\Subcategory;
 use App\Supplier;
 use App\Tag;
 use Illuminate\Http\Request;
+use Intervention\Image\Image;
 
 class ProductsController extends Controller
 {
@@ -43,11 +44,14 @@ class ProductsController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
-        $image = $request->image->store('public/products');
+        $imagePath = $request->image->store('public/products');
+
+        $image = \Intervention\Image\Facades\Image::make(public_path("storage/{$imagePath}"))->resize(1920, 1080);
+        $image->save();
 
         $product = Product::create([
             'title' => $request->title,
-            'image' => $image,
+            'image' => $imagePath,
             'shortdescript' => $request->shortdescript,
             'longdescript' => $request->longdescript,
             'supplier_id' => $request->supplier,
@@ -150,5 +154,10 @@ class ProductsController extends Controller
     public function tag(Tag $tag)
     {
         return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+    }
+
+    public function supplier(Supplier $supplier)
+    {
+        return view('products.supplier')->with('supplier', $supplier)->with('products', $supplier->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 }

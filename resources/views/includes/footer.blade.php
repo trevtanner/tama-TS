@@ -1,11 +1,12 @@
 
 <!-- Footer -->
 
-    <div style="background-color: #343A40;">
+    <div style="background-color: black;">
         <div class="container">
 
             <!-- Grid row-->
-            <div class="row py-4 d-flex align-items-center">
+{{--
+            <div class="row py-1 d-flex align-items-center">
 
                 <!-- Grid column -->
                 <div class="col-md-6 col-lg-7 text-center text-md-right">
@@ -35,24 +36,21 @@
                 <!-- Grid column -->
 
             </div>
+--}}
             <!-- Grid row-->
 
 
     <!-- Footer Links -->
-    <div class="container text-center text-md-left mt-5 text-white">
+    <div class="container text-center text-md-left mt-5 text-white pt-4">
 
         <!-- Grid row -->
         <div class="row mt-3">
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 align-items-center">
 
                 <!-- Content -->
-                <h6 class="text-uppercase font-weight-bold">Tama Team Sports</h6>
-                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.</p>
+                <a href=""><img src="https://via.placeholder.com/250?text=Tama+Team+Sports+Logo" alt=""></a>
 
             </div>
             <!-- Grid column -->
@@ -110,7 +108,7 @@
 
                 @else
                 <p>
-                    <a href="{{'login'}}">Login</a>
+                    <a href="{{route('login')}}">Login</a>
                 </p>
                 @endif
                 @if(auth()->user())
@@ -128,14 +126,11 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <!-- Links -->
-                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <h6 class="text-uppercase font-weight-bold">Tama Team Sports</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>
-                    <i class="fas fa-home mr-3">Colorado Springs, CO 80908</i></p>
-                <p>
-                    <i class="fas fa-envelope mr-3">info@example.com</i></p>
-                <p>
-                    <i class="fas fa-phone mr-3">1-719-528-8262</i></p>
+                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                    consectetur
+                    adipisicing elit.</p>
 
             </div>
             <!-- Grid column -->

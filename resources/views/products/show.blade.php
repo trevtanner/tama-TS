@@ -4,49 +4,69 @@
 @endsection
 @section('content')
     <div class="container">
-        <div class="row medium-padding120">
-            @include('includes.productsidebar')
-            <div class="product-details col-lg-8 col-md-8 col-sm-12 col-xs-12 d-flex">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pt-5">
-                    <div class="product-details-thumb">
-                        <div class="swiper-container" data-effect="fade">
-                        <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                            <!-- Slides -->
-                                <div class="product-details-img-wrap swiper-slide">
-                                    {{--                                    <img src="{{ asset( $product->image) }}" alt="product" data-swiper-parallax="-10">--}}
-                                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/300"></a>
+
+        <div class="row">
+        @include('includes.productsidebar')
+    <div class="col-lg-2"></div>
+            <div class="col-lg-6 pt-2">
+                <div class="card mt-4 align-items-center">
+                    <img class="card-img-top pt-2" src="{{ asset('storage/' . $product->image) }}" alt="">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">{{ $product->title }}</h3>
+                        @if(auth()->user())
+                            <div class="pt-1 pb-2">
+                            <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $product->id }})">Delete</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <form action="" method="POST" id="deleteProductForm">
+                                        @csrf
+                                        @method('DELETE')
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="deleteModalLabel">Delete Product</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="text-center text-bold">
+                                                    Are you sure you want to delete this product?
+                                                </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No, back</button>
+                                                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="product-details-info col-lg-6 col-md-4 col-sm-6 col-xs-6 pb-4 pt-5">
-                        <h3 class="product-details-info-title">{{ $product->title }}</h3>
-                        <br>
-                        <h5>Supplier:</h5>
-                        <p class="product-details-info-text">
-                            {{ $product->supplier->name }}
+                            </div>
+                        @endif
+                        <h4 class="card-text">Supplier:</h4>
+                        <p class="card-text">
+                            <a href="{{ route('supplier', $product->supplier->id) }}">{{ $product->supplier->name }}</a>
                         </p>
-                        <h5>Product #:</h5>
-                        <p class="product-details-info-text">
+                        <h5 class="card-text">Product #:</h5>
+                        <p class="card-text">
                             {{ $product->productnumber }}
                         </p>
                         <br>
-                        <p class="product-details-info-text">{{ $product->shortdescript }}</p>
-                        <h5>Description:</h5>
-                        <p class="product-details-info-text">{{ $product->longdescript }}</p>
+                        <p class="card-text">{{ $product->shortdescript }}</p>
+                        <h4 class="card-text">Description:</h4>
+                        <p class="card-text">{{ $product->longdescript }}</p>
                         <br>
-                        <h5>Category:</h5>
-                        <p class="product-details-info-text">
+                        <h5 class="card-text">Category:</h5>
+                        <p class="card-text">
                             @foreach ($product->tags as $tag)
                                 <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
                             @endforeach
                         </p>
-                        <p class="product-details-info-text">
-                            @foreach ($product->subcateories as $subcategories)
-                                <a href="">{{ $subcategories->name }}</a>
+                        <p class="card-text">
+                            @foreach ($product->subcategories as $subcategory)
+                                <a href="#">{{ $subcategory->name }}</a>
                             @endforeach
                         </p>
 
@@ -56,6 +76,7 @@
                 </div>
             </div>
         </div>
+    </div>
 @endsection
 
 @section('css')
@@ -63,5 +84,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+    <link href="css/shop-item.css" rel="stylesheet">
 
+@endsection
+
+@section('scripts')
+
+    <script>
+        function handleDelete(id) {
+            var form = document.getElementById('deleteProductForm');
+            form.action = '/products/' + id;
+            $('#deleteModel').modal('show');
+        }
+    </script>
 @endsection

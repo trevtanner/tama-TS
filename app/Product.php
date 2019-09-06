@@ -11,9 +11,9 @@ class Product extends Model
         'title',
         'shortdescript',
         'longdescript',
-        'image' ,
+        'image',
         'supplier_id',
-        'productnumber'
+        'productnumber',
     ];
 
     public function supplier()

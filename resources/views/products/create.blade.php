@@ -82,8 +82,8 @@
                             @endif
                             @if($subcategories->count() > 0)
                                 <div class="form-group">
-                                    <label for="tags">Sub-Category:</label>
-                                    <select name="tags[]" id="tags" class="form-control tagselector" multiple>
+                                    <label for="subcategories">Sub-Category:</label>
+                                    <select name="subcategories[]" id="subcategories" class="form-control tagselector" multiple>
                                         @foreach($subcategories as $subcategory)
                                             <option value="{{ $subcategory->id }}"
                                                     @if(isset($product))
