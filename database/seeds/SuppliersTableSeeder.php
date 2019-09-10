@@ -20,10 +20,22 @@ class SuppliersTableSeeder extends Seeder
         ]);
 
         DB::table('suppliers')->insert([
-            'name' => 'Allison'
+            'name' => 'Under Armour'
         ]);
         DB::table('suppliers')->insert([
-            'name' => 'Sanmar'
+            'name' => 'CRKT'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Smith & Wesson'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Gerber'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Otter Box'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Quicksilver'
         ]);
     }
 }

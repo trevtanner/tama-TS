@@ -12,28 +12,37 @@ class SubcategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('subcategories')->insert([
-            'name' => 'T-Shirt'
+            'name' => 'Tees'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Sweatshirt'
+            'name' => 'Hoodies'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Sweatpants'
+            'name' => 'Shirts'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Shorts'
+            'name' => 'Headware'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Backpack'
+            'name' => 'Stainless Steel Tumblers'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Duffel Bag'
+            'name' => 'Ceramic Mugs'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Snapback'
+            'name' => 'Glassware'
         ]);
         DB::table('subcategories')->insert([
-            'name' => 'Fitted Hat'
+            'name' => 'Backpacks'
+        ]);
+        DB::table('subcategories')->insert([
+            'name' => 'Duffel'
+        ]);
+        DB::table('subcategories')->insert([
+            'name' => 'Knives'
+        ]);
+        DB::table('subcategories')->insert([
+            'name' => 'Tools'
         ]);
     }
 }

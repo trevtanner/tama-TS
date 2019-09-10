@@ -15,16 +15,16 @@ class TagsTableSeeder extends Seeder
             'name' => 'Apparel'
         ]);
         DB::table('tags')->insert([
-            'name' => 'Bags'
-        ]);
-        DB::table('tags')->insert([
-            'name' => 'Hats'
-        ]);
-        DB::table('tags')->insert([
             'name' => 'Drinkware'
         ]);
         DB::table('tags')->insert([
-            'name' => 'Accessories'
+            'name' => 'Bags'
+        ]);
+        DB::table('tags')->insert([
+            'name' => 'Tactical'
+        ]);
+        DB::table('tags')->insert([
+            'name' => 'Coins'
         ]);
         DB::table('tags')->insert([
             'name' => 'Miscellaneous'

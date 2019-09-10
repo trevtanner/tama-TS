@@ -48,8 +48,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="supplier">Supplier:</label>
-                                <select name="supplier" id="supplier" class="form-control">
-                                    @foreach($suppliers as $supplier)
+                                <select name="supplier" id="supplier" class="mdb-select md-form">
+                                    <option value="" disabled selected>Select Supplier</option>
+                                @foreach($suppliers as $supplier)
                                         <option value="{{ $supplier->id }}"
                                                 @if(isset($product))
                                                 @if($supplier->id === $product->supplier_id)
@@ -66,8 +67,9 @@
                             @if($tags->count() > 0)
                                 <div class="form-group">
                                     <label for="tags">Category:</label>
-                                    <select name="tags[]" id="tags" class="form-control tagselector" multiple>
-                                        @foreach($tags as $tag)
+                                    <select name="tags[]" id="tags" class="mdb-select md-form">
+                                        <option value="" disabled selected>Select Category</option>
+                                    @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}"
                                                     @if(isset($product))
                                                     @if($product->hasTag($tag->id))
@@ -83,7 +85,7 @@
                             @if($subcategories->count() > 0)
                                 <div class="form-group">
                                     <label for="subcategories">Sub-Category:</label>
-                                    <select name="subcategories[]" id="subcategories" class="form-control tagselector" multiple>
+                                    <select name="subcategories[]" id="subcategories" class="mdb-select md-form colorful-select dropdown-danger" multiple>
                                         @foreach($subcategories as $subcategory)
                                             <option value="{{ $subcategory->id }}"
                                                     @if(isset($product))
@@ -112,8 +114,6 @@
 
 @section('scripts')
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>
 
     <script>
@@ -124,10 +124,10 @@
             $('#deleteModel').modal('show');
 
         }
-    </script>
-    <script>
+
+        // Material Select Initialization
         $(document).ready(function() {
-            $('.tagselector').select();
+            $('.mdb-select').materialSelect();
         });
     </script>
 @endsection
