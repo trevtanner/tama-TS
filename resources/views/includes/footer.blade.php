@@ -47,7 +47,7 @@
         <div class="row mt-3">
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 align-items-center">
+            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4 align-items-center">
 
                 <!-- Content -->
                 <a href=""><img src="https://via.placeholder.com/250?text=Tama+Team+Sports+Logo" alt=""></a>

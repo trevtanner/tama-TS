@@ -34,7 +34,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed" id="mainNav">
     <div class="container">
-    
+
     <!--Left side With App Name-->
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -64,10 +64,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('products.index')}}">Product Overview</a>
                             <a class="dropdown-item" href="{{route('tag', 1)}}">Apparel</a>
-                            <a class="dropdown-item" href="{{route('tag', 2)}}">Bags</a>
-                            <a class="dropdown-item" href="{{route('tag', 3)}}">Hats</a>
-                            <a class="dropdown-item" href="{{route('tag', 4)}}">Drinkware</a>
-                            <a class="dropdown-item" href="{{route('tag', 5)}}">Accessories</a>
+                            <a class="dropdown-item" href="{{route('tag', 2)}}">Drinkware</a>
+                            <a class="dropdown-item" href="{{route('tag', 3)}}">Bags</a>
+                            <a class="dropdown-item" href="{{route('tag', 4)}}">Tactical</a>
+                            <a class="dropdown-item" href="{{route('tag', 5)}}">Coins</a>
                             <a class="dropdown-item" href="{{route('tag', 6)}}">Miscellaneous</a>
                         </div>
                     </li>
@@ -89,10 +89,10 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{route('products.index')}}">Product Overview</a>
                             <a class="dropdown-item" href="{{route('tag', 1)}}">Apparel</a>
-                            <a class="dropdown-item" href="{{route('tag', 2)}}">Bags</a>
-                            <a class="dropdown-item" href="{{route('tag', 3)}}">Hats</a>
-                            <a class="dropdown-item" href="{{route('tag', 4)}}">Drinkware</a>
-                            <a class="dropdown-item" href="{{route('tag', 5)}}">Accessories</a>
+                            <a class="dropdown-item" href="{{route('tag', 2)}}">Drinkware</a>
+                            <a class="dropdown-item" href="{{route('tag', 3)}}">Bags</a>
+                            <a class="dropdown-item" href="{{route('tag', 4)}}">Tactical</a>
+                            <a class="dropdown-item" href="{{route('tag', 5)}}">Coins</a>
                             <a class="dropdown-item" href="{{route('tag', 6)}}">Miscellaneous</a>
                         </div>
                     </li>

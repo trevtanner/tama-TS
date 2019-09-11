@@ -5,7 +5,7 @@
     @endsection
 
 @section('content')
-<div class="container">
+<div class="container pt-4">
     <div class="row justify-content-center">
         <h1>Contact Us</h1>
     </div>
