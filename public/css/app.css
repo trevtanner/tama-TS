@@ -61,12 +61,12 @@ h6 {
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: cornflowerblue;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: cornflowerblue;
   text-shadow: none;
 }
 
@@ -92,20 +92,6 @@ img::-moz-selection {
   padding: 20px 40px;
 }
 
-.btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
-}
-
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
-  color: white;
-}
-
-.btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
-}
 
 #mainNav {
     background-color: black;
@@ -163,10 +149,10 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: black;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
+    font-size: 1em;
     padding: 12px 0;
   }
 }

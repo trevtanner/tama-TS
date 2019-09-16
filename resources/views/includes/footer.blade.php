@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-
+<footer class="page-footer font-small unique-color-dark">
     <div style="background-color: black;">
         <div class="container">
 
@@ -65,16 +65,16 @@
                     <a href="{{route('tag', 1)}}">Apparel</a>
                 </p>
                 <p>
-                    <a href="{{route('tag', 2)}}">Backpacks</a>
+                    <a href="{{route('tag', 2)}}">Drinkware</a>
                 </p>
                 <p>
-                    <a href="{{route('tag', 3)}}">Hats</a>
+                    <a href="{{route('tag', 3)}}">Bags</a>
                 </p>
                 <p>
-                    <a href="{{route('tag', 4)}}">Drinkware</a>
+                    <a href="{{route('tag', 4)}}">Tactical</a>
                 </p>
                 <p>
-                    <a href="{{route('tag', 5)}}">Accessories</a>
+                    <a href="{{route('tag', 5)}}">Coin</a>
                 </p>
                 <p>
                     <a href="{{route('tag', 6)}}">Miscellaneous</a>
@@ -128,9 +128,15 @@
                 <!-- Links -->
                 <h6 class="text-uppercase font-weight-bold">Tama Team Sports</h6>
                 <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                    consectetur
-                    adipisicing elit.</p>
+                <p>
+                    Colorado Springs, CO
+                </p>
+                <p>
+                    +1-719-999-9999
+                </p>
+                <p>
+                    <a href = "mailto: testemail@tamateamsports.com">testemail@tamateamsports.com</a>
+                </p>
 
             </div>
             <!-- Grid column -->
@@ -149,3 +155,4 @@
 <!-- Footer -->
     </div>
     </div>
+</footer>

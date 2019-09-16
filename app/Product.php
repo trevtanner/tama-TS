@@ -11,8 +11,12 @@ class Product extends Model
         'title',
         'shortdescript',
         'longdescript',
+        'index_image',
+        'main_image',
         'image',
         'supplier_id',
+        'tag_id',
+        'subcategory_id',
         'productnumber',
     ];
 
@@ -21,9 +25,9 @@ class Product extends Model
         return $this->belongsTo(Supplier::class);
     }
 
-    public function tags()
+    public function tag()
     {
-        return $this->belongsToMany(Tag::class);
+        return $this->belongsTo(Tag::class);
     }
 
     public function sizes()
@@ -36,9 +40,9 @@ class Product extends Model
         return $this->belongsToMany(Color::class);
     }
 
-    public function subcategories()
+    public function subcategory()
     {
-        return $this->belongsToMany(Subcategory::class);
+        return $this->belongsTo(Subcategory::class);
     }
 
     /**

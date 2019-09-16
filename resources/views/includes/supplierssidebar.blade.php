@@ -1,5 +1,5 @@
 
-<card class="card-default w-100">
+<card class="card-default w-100 tamasidebar">
     <div class="card-header">
         Suppliers
     </div>

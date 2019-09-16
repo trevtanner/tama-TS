@@ -8,9 +8,10 @@
         <div class="row">
         @include('includes.productsidebar')
     <div class="col-lg-2"></div>
-            <div class="col-lg-6 pt-2">
+            <div class="col-lg-6 pt-2 tama">
                 <div class="card mt-4 align-items-center">
-                    <img class="card-img-top pt-2" src="{{ asset('storage/' . $product->image) }}" alt="">
+                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+{{--                    <img class="card-img-top pt-2" src="{{ asset('storage/' . $product->image) }}" alt="">--}}
                     <div class="card-body text-center">
                         <h3 class="card-title">{{ $product->title }}</h3>
                         @if(auth()->user())
@@ -60,14 +61,10 @@
                         <br>
                         <h5 class="card-text">Category:</h5>
                         <p class="card-text">
-                            @foreach ($product->tags as $tag)
-                                <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
-                            @endforeach
+                                <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
                         </p>
                         <p class="card-text">
-                            @foreach ($product->subcategories as $subcategory)
-                                <a href="#">{{ $subcategory->name }}</a>
-                            @endforeach
+                                <a href="{{ route('subcategory', $product->subcategory->id) }}">{{ $product->subcategory->name }}</a>
                         </p>
 
 

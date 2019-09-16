@@ -22,7 +22,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="resources/css/app.css" rel="stylesheet">
+    <link href="/css/addon.css" rel="stylesheet">
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
@@ -55,9 +56,7 @@
             @yield('content')
         </main>
         <div class="footer">
-            <footer class="page-footer font-small unique-color-dark">
                 @include('includes.footer')
-            </footer>
         </div>
     <!-- Scripts -->
 

@@ -33,7 +33,7 @@
 <!--Header-->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed" id="mainNav">
-    <div class="container">
+    <div class="container align-items-baseline">
 
     <!--Left side With App Name-->
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -44,19 +44,15 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-
-            </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto nav">
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item pl-1">
                         <a class="nav-link" href="{{ route('home') }}">About</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown pl-1">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
@@ -71,17 +67,20 @@
                             <a class="dropdown-item" href="{{route('tag', 6)}}">Miscellaneous</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pl-1">
                         <a class="nav-link" href="{{ route('suppliers.index') }}">Suppliers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="{{ route('contact') }}">Contact Us</a>
+                    </li>
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="{{ route('search') }}">Search</a>
                     </li>
                 @else
-                    <li class="nav-item">
+                    <li class="nav-item pl-1">
                         <a class="nav-link" href="{{ route('home') }}">About</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown pl-1">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Products
                         </a>
@@ -96,13 +95,16 @@
                             <a class="dropdown-item" href="{{route('tag', 6)}}">Miscellaneous</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pl-1">
                         <a class="nav-link" href="{{ route('suppliers.index') }}">Suppliers</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item pl-1">
                         <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item pl-1">
+                        <a class="nav-link" href="{{ route('search') }}">Search</a>
+                    </li>
+                    <li class="nav-item dropdown pl-1">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>

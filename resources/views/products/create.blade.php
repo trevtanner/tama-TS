@@ -39,13 +39,31 @@
                             </div>
                             @if(isset($product))
                                 <div class="form-group">
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 100%">
+                                    <img src="{{ asset('storage/' . $product->index_image) }}" alt="" style="width: 100%">
                                 </div>
                             @endif
                             <div class="form-group">
-                                <label for="image">Image:</label>
-                                <input type="file" class="form-control-file" name="image" id="image">
+                                <label for="index_image">Index Image:</label>
+                                <input type="file" class="form-control-file" name="index_image" id="index_image">
                             </div>
+                    @if(isset($product))
+                        <div class="form-group">
+                            <img src="{{ asset('storage/' . $product->main_image) }}" alt="" style="width: 100%">
+                        </div>
+                    @endif
+                    <div class="form-group">
+                        <label for="main_image">Main Image:</label>
+                        <input type="file" class="form-control-file" name="main_image" id="main_image">
+                    </div>
+            @if(isset($product))
+                <div class="form-group">
+                    <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 100%">
+                </div>
+            @endif
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control-file" name="image" id="image">
+            </div>
                             <div class="form-group">
                                 <label for="supplier">Supplier:</label>
                                 <select name="supplier" id="supplier" class="custom-select">
@@ -66,8 +84,8 @@
                             </div>
                             @if($tags->count() > 0)
                                 <div class="form-group">
-                                    <label for="tags">Category:</label>
-                                    <select name="tags[]" id="tags" class="custom-select">
+                                    <label for="tag">Category:</label>
+                                    <select name="tag" id="tag" class="custom-select">
                                         <option value="" disabled selected>Select Category</option>
                                     @foreach($tags as $tag)
                                             <option value="{{ $tag->id }}"
@@ -84,8 +102,8 @@
                             @endif
                             @if($subcategories->count() > 0)
                                 <div class="form-group">
-                                    <label for="subcategories">Sub-Category:</label>
-                                    <select name="subcategories[]" id="subcategories" class="custom-select">
+                                    <label for="subcategory">Sub-Category:</label>
+                                    <select name="subcategory" id="subcategory" class="custom-select">
                                         <option value="" disabled selected>Select Sub-Category</option>
                                         @foreach($subcategories as $subcategory)
                                             <option value="{{ $subcategory->id }}"

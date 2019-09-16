@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $tag->name }}-Tama Team Sports</title>
+    <title>{{ $supplier->name }}-Tama Team Sports</title>
 @endsection
 @section('content')
     {{--
@@ -40,9 +40,8 @@
         <!-- /.col-lg-3 -->
 
             <div class="col-lg-9 tama">
-
-            <div class="text-center pt-4">
-                        <h1>{{$tag->name}}</h1>
+                    <div class="text-center pt-4">
+                        <h1>{{$supplier->name}}</h1>
                     </div>
                 <div class="row pt-3">
                     @foreach ($products as $product)
@@ -68,21 +67,21 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="row justify-content-center">
-                    <p>
-                        {{ $products->links() }}
-
-                    </p>
-                </div>
 
                 </div>
                 <!-- /.row -->
+            <div class="row justify-content-center">
+                <p>
+                    {{ $products->links() }}
 
+                </p>
+            </div>
             </div>
             <!-- /.col-lg-9 -->
 
         </div>
         <!-- /.row -->
+
 @endsection
 
 @section('scripts')

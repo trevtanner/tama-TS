@@ -39,7 +39,7 @@
 
                     @include('includes.tagssidebar')
 
-                        <div class="col-lg-9">
+                        <div class="col-lg-9 tama">
                             <div class="text-center pt-4">
                                 <h1>Product Overview</h1>
                             </div>
@@ -75,21 +75,22 @@
                                 @foreach ($products as $product)
                                 <div class="col-lg-4 col-md-6 mb-4">
                                     <div class="card h-100">
-                                        <a href="#"><img class="card-img-top" src="{{ asset('storage/' . $product->image) }}" alt=""></a>
+                                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+{{--                                        <a href="#"><img class="card-img-top" src="{{ asset('storage/' . $product->image) }}" alt=""></a>--}}
                                         <div class="card-body">
                                             <h5 class="card-title">
                                                 <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>
                                             </h5>
 
+                                            <a href="{{ route('supplier', $product->supplier->id) }}">{{ $product->supplier->name }}</a>
                                             <p class="card-text">{{ $product->productnumber }}</p>
 
                                             <p class="card-text">{{ $product->shortdescript }}</p>
                                             <hr>
-                                            <a href="{{ route('supplier', $product->supplier->id) }}">{{ $product->supplier->name }}</a>
                                         </div>
-                                        <div class="card-footer">@foreach ($product->tags as $tag)
-                                                <a href="{{ route('tag', $tag->id) }}">{{ $tag->name }}</a>
-                                            @endforeach</div>
+                                        <div class="card-footer">
+                                                <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
+                                        </div>
                                     </div>
                                 </div>
                                 @endforeach
@@ -97,6 +98,12 @@
 
                             </div>
                             <!-- /.row -->
+                            <div class="row justify-content-center">
+                                <p>
+                                    {{ $products->links() }}
+
+                                </p>
+                            </div>
 
                         </div>
                         <!-- /.col-lg-9 -->

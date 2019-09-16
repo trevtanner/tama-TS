@@ -48,8 +48,10 @@ Route::get('suppliers', 'SuppliersController@index')->name('suppliers.index');
 
 //Route::resource('products', 'ProductsController');
 Route::get('products', 'ProductsController@index')->name('products.index');
+Route::get('products.search', 'ProductsController@search')->name('search');
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
 
 Route::get('category/supplier/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
 Route::get('/category/tag/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
+Route::get('/category/subcategory/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
 

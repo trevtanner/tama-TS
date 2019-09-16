@@ -12,6 +12,7 @@ use App\Subcategory;
 use App\Supplier;
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Intervention\Image\Image;
 
 class ProductsController extends Controller
@@ -23,7 +24,11 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index')->with('products', Product::all())->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+        return view('products.index')
+            ->with('products', Product::simplePaginate(6))
+            ->with('suppliers', Supplier::all())
+            ->with('tags', Tag::all())
+            ->with('subcategories', Subcategory::all());
     }
 
     /**
@@ -44,6 +49,16 @@ class ProductsController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
+        $indeximagePath = $request->index_image->store('public/products');
+
+        $indeximage = \Intervention\Image\Facades\Image::make(public_path("storage/{$indeximagePath}"))->resize(1920, 1080);
+        $indeximage->save();
+
+        $mainimagePath = $request->main_image->store('public/products');
+
+        $mainimage = \Intervention\Image\Facades\Image::make(public_path("storage/{$mainimagePath}"))->resize(1920, 1080);
+        $mainimage->save();
+
         $imagePath = $request->image->store('public/products');
 
         $image = \Intervention\Image\Facades\Image::make(public_path("storage/{$imagePath}"))->resize(1920, 1080);
@@ -51,19 +66,17 @@ class ProductsController extends Controller
 
         $product = Product::create([
             'title' => $request->title,
+            'index_image' => $indeximagePath,
+            'main_image' => $mainimagePath,
             'image' => $imagePath,
             'shortdescript' => $request->shortdescript,
             'longdescript' => $request->longdescript,
             'supplier_id' => $request->supplier,
+            'tag_id' => $request->tag,
+            'subcategory_id' => $request->subcategory,
             'productnumber' => $request->productnumber,
 
         ]);
-        if ($request->tags) {
-            $product->tags()->attach($request->tags);
-        }
-        if ($request->subcategories) {
-            $product->subcategories()->attach($request->subcategories);
-        }
 
             session()->flash('success', 'Product created successfully.');
 
@@ -159,5 +172,23 @@ class ProductsController extends Controller
     public function supplier(Supplier $supplier)
     {
         return view('products.supplier')->with('supplier', $supplier)->with('products', $supplier->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+    }
+
+    public function subcategory(Subcategory $subcategory)
+    {
+        return view('products.subcategory')->with('subcategory', $subcategory)->with('products', $subcategory->products()->simplePaginate(3))->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+    }
+
+    public function search()
+    {
+        $search = request()->query('search');
+        if ($search) {
+            $products = Product::where('title', 'like', '%' .$search. '%')->simplePaginate(3);
+        }
+        else {
+            $products = Product::simplePaginate(3);
+        }
+
+        return view('products.search')->with('products', $products)->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 }

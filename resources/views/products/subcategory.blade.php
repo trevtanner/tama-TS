@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    <title>{{ $tag->name }}-Tama Team Sports</title>
+    <title>{{ $subcategory->name }}-Tama Team Sports</title>
 @endsection
 @section('content')
     {{--
@@ -42,7 +42,7 @@
             <div class="col-lg-9 tama">
 
             <div class="text-center pt-4">
-                        <h1>{{$tag->name}}</h1>
+                        <h1>{{$subcategory->name}}</h1>
                     </div>
                 <div class="row pt-3">
                     @foreach ($products as $product)
