@@ -49,25 +49,20 @@ class ProductsController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
-        $indeximagePath = $request->index_image->store('public/products');
 
-        $indeximage = \Intervention\Image\Facades\Image::make(public_path("storage/{$indeximagePath}"))->resize(1920, 1080);
-        $indeximage->save();
+        $indeximagePath = $request->index_image->store('products', 'public');
 
-        $mainimagePath = $request->main_image->store('public/products');
+        $index_image = \Intervention\Image\Facades\Image::make("storage/{$indeximagePath}")->resize(1920, 1080);
+        $index_image->save();
 
-        $mainimage = \Intervention\Image\Facades\Image::make(public_path("storage/{$mainimagePath}"))->resize(1920, 1080);
-        $mainimage->save();
+        $imagePath = $request->image->store('products', 'public');
 
-        $imagePath = $request->image->store('public/products');
-
-        $image = \Intervention\Image\Facades\Image::make(public_path("storage/{$imagePath}"))->resize(1920, 1080);
+        $image = \Intervention\Image\Facades\Image::make("storage/{$imagePath}")->resize(1920, 1080);
         $image->save();
 
         $product = Product::create([
             'title' => $request->title,
             'index_image' => $indeximagePath,
-            'main_image' => $mainimagePath,
             'image' => $imagePath,
             'shortdescript' => $request->shortdescript,
             'longdescript' => $request->longdescript,
@@ -166,27 +161,27 @@ class ProductsController extends Controller
 
     public function tag(Tag $tag)
     {
-        return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+        return view('products.tag')->with('tag', $tag)->with('products', $tag->products()->simplePaginate(9))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     public function supplier(Supplier $supplier)
     {
-        return view('products.supplier')->with('supplier', $supplier)->with('products', $supplier->products()->simplePaginate(3))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+        return view('products.supplier')->with('supplier', $supplier)->with('products', $supplier->products()->simplePaginate(9))->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     public function subcategory(Subcategory $subcategory)
     {
-        return view('products.subcategory')->with('subcategory', $subcategory)->with('products', $subcategory->products()->simplePaginate(3))->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
+        return view('products.subcategory')->with('subcategory', $subcategory)->with('products', $subcategory->products()->simplePaginate(9))->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());
     }
 
     public function search()
     {
         $search = request()->query('search');
         if ($search) {
-            $products = Product::where('title', 'like', '%' .$search. '%')->simplePaginate(3);
+            $products = Product::where('title', 'like', '%' .$search. '%')->simplePaginate(9);
         }
         else {
-            $products = Product::simplePaginate(3);
+            $products = Product::simplePaginate(9);
         }
 
         return view('products.search')->with('products', $products)->with('suppliers', Supplier::all())->with('tags', Tag::all())->with('subcategories', Subcategory::all());

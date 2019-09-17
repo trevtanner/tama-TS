@@ -37,33 +37,25 @@
                                 <textarea name="longdescript" id="longdescript" cols="20" rows="10" class="form-control">{{ isset($product) ? $product->longdescript : '' }}</textarea>
 
                             </div>
-                            @if(isset($product))
-                                <div class="form-group">
-                                    <img src="{{ asset('storage/' . $product->index_image) }}" alt="" style="width: 100%">
-                                </div>
-                            @endif
-                            <div class="form-group">
-                                <label for="index_image">Index Image:</label>
-                                <input type="file" class="form-control-file" name="index_image" id="index_image">
-                            </div>
-                    @if(isset($product))
-                        <div class="form-group">
-                            <img src="{{ asset('storage/' . $product->main_image) }}" alt="" style="width: 100%">
-                        </div>
-                    @endif
-                    <div class="form-group">
-                        <label for="main_image">Main Image:</label>
-                        <input type="file" class="form-control-file" name="main_image" id="main_image">
-                    </div>
+
             @if(isset($product))
                 <div class="form-group">
-                    <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 100%">
+                    <img src="{{ asset('storage/' . $product->index_image) }}" alt="" style="width: 100%">
                 </div>
             @endif
             <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="file" class="form-control-file" name="image" id="image">
+                <label for="index_image">Index Image:</label>
+                <input type="file" class="form-control-file" name="index_image" id="index_image">
             </div>
+                            @if(isset($product))
+                                <div class="form-group">
+                                    <img src="{{ asset('storage/' . $product->image) }}" alt="" style="width: 100%">
+                                </div>
+                            @endif
+                            <div class="form-group">
+                                <label for="image">Image:</label>
+                                <input type="file" class="form-control-file" name="image" id="image">
+                            </div>
                             <div class="form-group">
                                 <label for="supplier">Supplier:</label>
                                 <select name="supplier" id="supplier" class="custom-select">

@@ -17,12 +17,14 @@
         <br>
         <button class="btn btn-lg my-2" style="background-color: red; color: white" type="submit">Search</button>
     </form>
+    <hr>
     <div class="row pt-3">
+        <div class="col-12 align-text-center"><h3>Results<br><br></h3></div>
         @foreach ($products as $product)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                    {{--                                <a href="#"><img class="card-img-top" src="{{ asset('storage/' . $product->image) }}" alt=""></a>--}}
+{{--                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>--}}
+                    <a href="{{ route('products.show', $product->id) }}"><img class="card-img-top" src="{{ asset('storage/' . $product->index_image) }}" alt=""></a>
                     <div class="card-body">
                         <h5 class="card-title">
                             <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>

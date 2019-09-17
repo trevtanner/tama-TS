@@ -27,6 +27,7 @@ class UpdateProductRequest extends FormRequest
             'title'=> 'required',
             'shortdescript'=> 'required',
             'longdescript'=> 'required',
+            'index_image' => 'required|image',
             'image' => 'required|image',
             'supplier' => 'required',
             'productnumber' => 'required',

@@ -21,7 +21,6 @@ class CreateProductsTable extends Migration
             $table->text('shortdescript');
             $table->text('longdescript');
             $table->string('index_image');
-            $table->string('main_image');
             $table->string('image');
             $table->integer('supplier_id');
             $table->integer('tag_id');

@@ -51,7 +51,7 @@ Route::get('products', 'ProductsController@index')->name('products.index');
 Route::get('products.search', 'ProductsController@search')->name('search');
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
 
-Route::get('category/supplier/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
-Route::get('/category/tag/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
-Route::get('/category/subcategory/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
+Route::get('tts/ma/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
+Route::get('/tts/tg/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
+Route::get('/tts/sc/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
 

@@ -12,7 +12,6 @@ class Product extends Model
         'shortdescript',
         'longdescript',
         'index_image',
-        'main_image',
         'image',
         'supplier_id',
         'tag_id',
@@ -56,6 +55,8 @@ class Product extends Model
      */
     public function deleteImage()
     {
+        Storage::deleted($this->main_image);
+        Storage::deleted($this->index_image);
         Storage::deleted($this->image);
     }
 

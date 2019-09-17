@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/sparkler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/usflag.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tama-team-sports.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tama-team-sports.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Products/CreateProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Products/CreateProductRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Products/UpdateProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Products/UpdateProductRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/agency.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/agency.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_20_034913_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_20_034913_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/faq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/imprint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/imprint.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/productsidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/productsidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/supplierssidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/supplierssidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/tagssidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/tagssidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/products/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/subcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/subcategory.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/supplier.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/supplier.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/products/tag.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/products/tag.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -196,14 +199,14 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\storage\app\public" />
+      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\public\storage" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\resources\views\products" />
       <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\resources\views\includes" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\storage\app\public" />
-      <recent name="C:\xampp\htdocs\Tama-Lacrosse\tama-team-sports\public\storage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -262,7 +265,8 @@
       <workItem from="1567146489555" duration="1103000" />
       <workItem from="1567234591845" duration="3660000" />
       <workItem from="1568148878808" duration="5792000" />
-      <workItem from="1568180908674" duration="926000" />
+      <workItem from="1568180908674" duration="1113000" />
+      <workItem from="1568663242215" duration="13045000" />
     </task>
     <task id="LOCAL-00001" summary="First Push">
       <created>1566200814482</created>
@@ -320,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567238231797</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated homepage and spacing">
+      <created>1568183308571</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568183308571</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +387,7 @@
     <MESSAGE value="Added template and product show page" />
     <MESSAGE value="Working on products show and index page, still need to add search function for tags, image from product DOES NOT display" />
     <MESSAGE value="Changed products to have product numbers and no colors/sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed products to have product numbers and no colors/sizes" />
+    <MESSAGE value="updated homepage and spacing" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated homepage and spacing" />
   </component>
 </project>
