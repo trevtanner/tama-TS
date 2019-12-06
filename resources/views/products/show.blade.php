@@ -6,44 +6,50 @@
     <div class="container">
 
         <div class="row">
-        @include('includes.productsidebar')
-    <div class="col-lg-2"></div>
+            @include('includes.productsidebar')
+            <div class="col-lg-2"></div>
             <div class="col-lg-6 pt-2 tama">
                 <div class="card mt-4 align-items-center">
-{{--                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">--}}
+                    {{--                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">--}}
                     <img class="card-img-top pt-2" src="{{ asset('storage/' . $product->image) }}" alt="">
                     <div class="card-body text-center">
                         <h3 class="card-title">{{ $product->title }}</h3>
                         @if(auth()->user())
                             <div class="pt-1 pb-2">
-                            <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $product->id }})">Delete</button>
+                                <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $product->id }})">
+                                    Delete
+                                </button>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <form action="" method="POST" id="deleteProductForm">
-                                        @csrf
-                                        @method('DELETE')
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="deleteModalLabel">Delete Product</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog"
+                                     aria-labelledby="deleteModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <form action="" method="POST" id="deleteProductForm">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel">Delete Product</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="text-center text-bold">
+                                                        Are you sure you want to delete this product?
+                                                    </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">No, back
+                                                    </button>
+                                                    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <p class="text-center text-bold">
-                                                    Are you sure you want to delete this product?
-                                                </p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No, back</button>
-                                                <button type="submit" class="btn btn-danger">Yes, Delete</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                         @endif
                         <h4 class="card-text">Manufacturer:</h4>
@@ -61,10 +67,10 @@
                         <br>
                         <h5 class="card-text">Category:</h5>
                         <p class="card-text">
-                                <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
+                            <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
                         </p>
                         <p class="card-text">
-                                <a href="{{ route('subcategory', $product->subcategory->id) }}">{{ $product->subcategory->name }}</a>
+                            <a href="{{ route('subcategory', $product->subcategory->id) }}">{{ $product->subcategory->name }}</a>
                         </p>
 
 
@@ -80,7 +86,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet"/>
     <link href="css/shop-item.css" rel="stylesheet">
 
 @endsection

@@ -9,9 +9,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @yield('title')
+@yield('title')
 
-    <!-- Scripts -->
+<!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 
@@ -26,41 +26,43 @@
 
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Gayathri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     @yield('css')
 </head>
 <body>
-    <div id="app">
-        @include('includes.header')
-        <main>
-            {{--    <div class="container pb-4">
-                    @if(session()->has('success'))
-                        <div class="alert alert-success">
-                            {{ session()->get('success') }}
-                        </div>
+<div id="app">
+    @include('includes.header')
+    <main>
+        {{--    <div class="container pb-4">
+                @if(session()->has('success'))
+                    <div class="alert alert-success">
+                        {{ session()->get('success') }}
+                    </div>
+                @endif
+                @if(session()->has('error'))
+                    <div class="alert alert-danger">
+                        {{ session()->get('error') }}
+                    </div>
                     @endif
-                    @if(session()->has('error'))
-                        <div class="alert alert-danger">
-                            {{ session()->get('error') }}
-                        </div>
-                        @endif
-                </div>--}}
-            @yield('content')
-        </main>
-        <div class="footer">
-                @include('includes.footer')
-        </div>
+            </div>--}}
+        @yield('content')
+    </main>
+    <div class="footer">
+        @include('includes.footer')
+    </div>
     <!-- Scripts -->
 
     @yield('scripts')
-    </div>
+</div>
 </body>
 </html>

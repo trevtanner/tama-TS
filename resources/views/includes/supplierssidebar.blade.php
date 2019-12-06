@@ -1,29 +1,30 @@
-
 <card class="card-default w-100 tamasidebar">
     <div class="card-header">
-        Suppliers
+        Manufacturers
     </div>
     <div class="card-body">
-    <ul class="list-group">
-        @foreach($suppliers as $supplier)
+        <ul class="list-group">
+            @foreach($suppliers as $supplier)
 
-            <li class="list-group-item">
-                <div class="d-flex justify-content-between align-items-baseline">
-                {{$supplier->name}}
-                <div class="d-flex justify-content-end">
-                    <div class="pr-2">
-                    <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-info btn-sm">
-                        Edit
-                    </a>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                        {{$supplier->name}}
+                        <div class="d-flex justify-content-end">
+                            <div class="pr-2">
+                                <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-info btn-sm">
+                                    Edit
+                                </a>
+                            </div>
+                            <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $supplier->id }})">Delete
+                            </button>
+                        </div>
                     </div>
-                    <button class="btn btn-danger btn-sm" onclick="handleDelete({{ $supplier->id }})">Delete</button>
-                </div>
-                </div>
-            </li>
+                </li>
             @endforeach
-    </ul>
+        </ul>
         <!-- Modal -->
-        <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <form action="" method="POST" id="deleteSupplierForm">
                     @csrf

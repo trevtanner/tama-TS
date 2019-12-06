@@ -13,7 +13,7 @@ class SizesTableSeeder extends Seeder
     {
         DB::table('sizes')->insert([
             'name' => 'SM'
-    ]);
+        ]);
         DB::table('sizes')->insert([
             'name' => 'MD'
         ]);

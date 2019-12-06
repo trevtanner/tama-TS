@@ -45,13 +45,9 @@ class Product extends Model
     }
 
     /**
-
      * Delete post image from storage
-
      *
-
      * @return void
-
      */
     public function deleteImage()
     {

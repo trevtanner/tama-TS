@@ -14,11 +14,11 @@ class CreateColorProductTable extends Migration
     public function up()
     {
         Schema::create('color_product', function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->integer('product_id');
-                $table->integer('color_id');
-                $table->timestamps();
-            });
+            $table->bigIncrements('id');
+            $table->integer('product_id');
+            $table->integer('color_id');
+            $table->timestamps();
+        });
     }
 
     /**

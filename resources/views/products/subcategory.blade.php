@@ -33,7 +33,7 @@
                     </nav>--}}
 
     <!-- Page Content -->
-<div class="container">
+    <div class="container">
         <div class="row">
 
         @include('includes.tagssidebar')
@@ -41,15 +41,17 @@
 
             <div class="col-lg-9 tama">
 
-            <div class="text-center pt-4">
-                        <h1>{{$subcategory->name}}</h1>
-                    </div>
+                <div class="text-center pt-4">
+                    <h1>{{$subcategory->name}}</h1>
+                </div>
                 <div class="row pt-3">
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="card h-100">
-{{--                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>--}}
-                                <a href="{{ route('products.show', $product->id) }}"><img class="card-img-top" src="{{ asset('storage/' . $product->index_image) }}" alt=""></a>
+                                {{--                                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>--}}
+                                <a href="{{ route('products.show', $product->id) }}"><img class="card-img-top"
+                                                                                          src="{{ asset('storage/' . $product->index_image) }}"
+                                                                                          alt=""></a>
                                 <div class="card-body">
                                     <h5 class="card-title">
                                         <a href="{{ route('products.show', $product->id) }}">{{ $product->title }}</a>
@@ -62,7 +64,7 @@
                                     <a href="{{ route('supplier', $product->supplier->id) }}">{{ $product->supplier->name }}</a>
                                 </div>
                                 <div class="card-footer">
-                                        <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
+                                    <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
                                 </div>
                             </div>
                         </div>
@@ -75,14 +77,14 @@
                     </p>
                 </div>
 
-                </div>
-                <!-- /.row -->
-
             </div>
-            <!-- /.col-lg-9 -->
+            <!-- /.row -->
 
         </div>
-        <!-- /.row -->
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
 @endsection
 
 @section('scripts')
@@ -105,6 +107,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.0/trix.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/css/select2.min.css" rel="stylesheet"/>
 
 @endsection
