@@ -1,9 +1,9 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="white" id="navbar" class="vueNav">
+        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav">
             <b-navbar-brand :href="home">TTS</b-navbar-brand>
 
-            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-navbar-toggle target="nav-collapse"/>
 
             <b-collapse id="nav-collapse" is-nav>
 
@@ -55,12 +55,15 @@
 <style scoped>
 .vueNav {
     background-color: black;
+    color: red;
 }
-
-@media(min-width:992px){
+@media(min-width:574px){
     #navbar {
         padding: 25px;
     }
+}
+button{
+    border-color: red;
 }
 </style>
 

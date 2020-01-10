@@ -38410,7 +38410,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.vueNav[data-v-a2baaf14] {\n    background-color: black;\n}\n@media(min-width:992px){\n#navbar[data-v-a2baaf14] {\n        padding: 25px;\n}\n}\n", ""]);
+exports.push([module.i, "\n.vueNav[data-v-a2baaf14] {\n    background-color: black;\n    color: red;\n}\n@media(min-width:574px){\n#navbar[data-v-a2baaf14] {\n        padding: 25px;\n}\n}\nbutton[data-v-a2baaf14]{\n    border-color: red;\n}\n", ""]);
 
 // exports
 
@@ -73430,7 +73430,7 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "carousel-caption" }, [
-                _c("p", [_vm._v("For All Your Customization Needs")])
+                _c("p", [_vm._v("Serving Both Military and Personal Needs")])
               ])
             ]
           )
@@ -73563,14 +73563,14 @@ var staticRenderFns = [
     return _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-lg-12 text-center" }, [
         _c("h2", { staticClass: "section-heading text-uppercase" }, [
-          _vm._v("for all your promotional, retention and custom needs")
+          _vm._v("for all your promotional, retention and custom goods")
         ]),
         _vm._v(" "),
         _c("br"),
         _vm._v(" "),
         _c("h3", { staticClass: "section-subheading" }, [
           _vm._v(
-            "\n                        standing behind what we do, and who we do it for\n                    "
+            "\n                        Standing behind what we do, and who we do it for.\n                    "
           )
         ])
       ])
@@ -73928,7 +73928,7 @@ var render = function() {
         "b-navbar",
         {
           staticClass: "vueNav",
-          attrs: { toggleable: "lg", type: "white", id: "navbar" }
+          attrs: { toggleable: "sm", type: "", id: "navbar" }
         },
         [
           _c("b-navbar-brand", { attrs: { href: _vm.home } }, [_vm._v("TTS")]),
