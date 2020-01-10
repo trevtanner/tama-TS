@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Contact Us - Tama Team Sports</title>
+    <title>Tama Team Sports - Contact Us</title>
+    <meta name="description" content="Tama Team Sports contact us page. any and all the information one could need to reach
+    out to Tama Team Sports to get any questions answered">
 @endsection
 
 @section('content')

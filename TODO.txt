@@ -1,20 +1,3 @@
-TODO: FINISH HOMEPAGE LAYOUT
 TODO: CLOSE ERROR WHERE DELETING SUPPLIER BROKE APP WHEN GOING TO PRODUCT PAGES THAT PULL DELETED SUPPLIER
-
-
-|        | GET|HEAD  | products                  | products.index    | App\Http\Controllers\ProductsController@index                          | web          |
-|        | POST      | products                  | products.store    | App\Http\Controllers\ProductsController@store                          | web          |
-|        | GET|HEAD  | products/create           | products.create   | App\Http\Controllers\ProductsController@create                         | web          |
-|        | GET|HEAD  | products/{product}        | products.show     | App\Http\Controllers\ProductsController@show                           | web          |
-|        | DELETE    | products/{product}        | products.destroy  | App\Http\Controllers\ProductsController@destroy                        | web          |
-|        | PUT|PATCH | products/{product}        | products.update   | App\Http\Controllers\ProductsController@update                         | web          |
-|        | GET|HEAD  | products/{product}/edit   | products.edit     | App\Http\Controllers\ProductsController@edit                           | web          |
-|        | POST      | register                  |                   | App\Http\Controllers\Auth\RegisterController@register                  | web,guest    |
-|        | GET|HEAD  | register                  | register          | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest    |
-|        | POST      | suppliers                 | suppliers.store   | App\Http\Controllers\SuppliersController@store                         | web          |
-|        | GET|HEAD  | suppliers                 | suppliers.index   | App\Http\Controllers\SuppliersController@index                         | web          |
-|        | GET|HEAD  | suppliers/create          | suppliers.create  | App\Http\Controllers\SuppliersController@create                        | web          |
-|        | DELETE    | suppliers/{supplier}      | suppliers.destroy | App\Http\Controllers\SuppliersController@destroy                       | web          |
-|        | PUT|PATCH | suppliers/{supplier}      | suppliers.update  | App\Http\Controllers\SuppliersController@update                        | web          |
-|        | GET|HEAD  | suppliers/{supplier}      | suppliers.show    | App\Http\Controllers\SuppliersController@show                          | web          |
-|        | GET|HEAD  | suppliers/{supplier}/edit | suppliers.edit    | App\Http\Controllers\SuppliersController@edit                          | web          |
+TODO: FINISH VUEHEADER AND PASS ROUTES AS PROPS
+TODO: CONVERT ALL NON PRODUCT PAGES TO VUE TEMPLATES

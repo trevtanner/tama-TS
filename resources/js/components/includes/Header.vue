@@ -1,0 +1,66 @@
+<template>
+    <div>
+        <b-navbar toggleable="lg" type="white" id="navbar" class="vueNav">
+            <b-navbar-brand :href="home">TTS</b-navbar-brand>
+
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav>
+
+                <!-- Right aligned nav items -->
+                <b-navbar-nav class="ml-auto">
+
+                    <b-nav-item :href="home" right>About</b-nav-item>
+                    <b-nav-item-dropdown text="Products" right>
+                        <b-dropdown-item :href="productIndex">Product Overview</b-dropdown-item>
+                        <b-dropdown-item :href="tag1">Apparel</b-dropdown-item>
+                        <b-dropdown-item :href="tag2">Drinkware</b-dropdown-item>
+                        <b-dropdown-item :href="tag3">Bags</b-dropdown-item>
+                        <b-dropdown-item :href="tag4">Tactical</b-dropdown-item>
+                        <b-dropdown-item :href="tag5">Coins</b-dropdown-item>
+                        <b-dropdown-item :href="tag6">Miscellaneous</b-dropdown-item>
+                    </b-nav-item-dropdown>
+                    <b-nav-item :href="suppliersIndex" right>Manufacturers</b-nav-item>
+                    <b-nav-item :href="contact" right>Contact Us</b-nav-item>
+                    <b-nav-item :href="search" right>Search</b-nav-item>
+
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
+    </div>
+</template>
+
+
+<script>
+    export default {
+        name: "Header",
+
+        props: {
+            home: {type: String, required: true},
+            productIndex: {type: String, required: true},
+            tag1: {type: String, required: true},
+            tag2: {type: String, required: true},
+            tag3: {type: String, required: true},
+            tag4: {type: String, required: true},
+            tag5: {type: String, required: true},
+            tag6: {type: String, required: true},
+            suppliersIndex: {type: String, required: true},
+            contact: {type: String, required: true},
+            search: {type: String, required: true},
+        }
+    }
+
+</script>
+
+<style scoped>
+.vueNav {
+    background-color: black;
+}
+
+@media(min-width:992px){
+    #navbar {
+        padding: 25px;
+    }
+}
+</style>
+
