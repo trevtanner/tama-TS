@@ -44,17 +44,18 @@ Vue.use(BootstrapVue);
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('app-heat-press', require('./components/HeatPress.vue').default);
-Vue.component('app-laser-engraving', require('./components/LaserEngraving.vue').default);
-Vue.component('app-embroidery', require('./components/Embroidery.vue').default);
-Vue.component('app-screen-printing', require('./components/ScreenPrinting.vue').default);
-Vue.component('app-home-page', require('./components/HomePage.vue').default);
+Vue.component('app-heat-press', require('./components/imprint/HeatPress.vue').default);
+Vue.component('app-laser-engraving', require('./components/imprint/LaserEngraving.vue').default);
+Vue.component('app-embroidery', require('./components/imprint/Embroidery.vue').default);
+Vue.component('app-screen-printing', require('./components/imprint/ScreenPrinting.vue').default);
 Vue.component('app-header', require('./components/includes/Header.vue').default);
 Vue.component('app-footer', require('./components/includes/Footer.vue').default);
+Vue.component('app-home-page', require('./components/HomePage.vue').default);
 Vue.component('app-home-carousel', require('./components/homepage/HomeCarousel.vue').default);
 Vue.component('app-cookie-law', require('./components/includes/CookieLaw.vue').default);
-
+Vue.component('contact-us', require('./components/contact/ContactUs').default);
+Vue.component('app-products', require('./components/Products').default);
+Vue.component('app-tag-image', require('./components/TagsImage').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

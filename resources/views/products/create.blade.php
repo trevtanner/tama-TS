@@ -50,7 +50,7 @@
                                 </div>
                             @endif
                             <div class="form-group">
-                                <label for="index_image">Index Image:</label>
+                                <label for="index_image">Card Image:</label>
                                 <input type="file" class="form-control-file" name="index_image" id="index_image">
                             </div>
                             @if(isset($product))
@@ -140,7 +140,6 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
 
-    Bootstrap Themes
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js"></script>

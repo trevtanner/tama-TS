@@ -33,7 +33,6 @@
                     </nav>--}}
 
     <!-- Page Content -->
-    <div class="container">
         <div class="row">
 
         @include('includes.tagssidebar')
@@ -83,7 +82,8 @@
         </div>
         <!-- /.col-lg-9 -->
 
-    </div>
+        </div>
+        <div class="container">
     <!-- /.row -->
 @endsection
 

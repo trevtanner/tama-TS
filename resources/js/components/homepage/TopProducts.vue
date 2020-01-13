@@ -1,9 +1,9 @@
 <template>
     <div>
-        <section class="page-section services pt-5 pb-5">
-            <div class="container">
+        <section class="page-section services pt-2 pb-3">
+            <div class="container pt-3 pb-2">
                 <div>
-                    <h3 class="text-center pb-1">Top Products</h3>
+                    <h1 class="text-center pb-1">Top Products</h1>
                     <br>
                     <b-card-group deck class="w-100">
 

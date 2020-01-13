@@ -52,7 +52,7 @@ class ProductsController extends Controller
 
         $indeximagePath = $request->index_image->store('products', 'public');
 
-        $index_image = \Intervention\Image\Facades\Image::make("storage/{$indeximagePath}")->resize(1920, 1080);
+        $index_image = \Intervention\Image\Facades\Image::make("storage/{$indeximagePath}")->resize(300, 300);
         $index_image->save();
 
         $imagePath = $request->image->store('products', 'public');

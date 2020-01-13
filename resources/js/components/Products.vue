@@ -10,17 +10,7 @@
         >
             <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/usflag480.jpg')" style="max-height: 480px" class="slidetext">
                 <div class="carousel-caption">
-                    <p>Tama Team Sports</p>
-                </div>
-            </b-carousel-slide>
-            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/mtns480.jpg')" style="max-height: 480px" class="slidetext">
-                <div class="carousel-caption">
-                    <p>Started In Colorado</p>
-                </div>
-            </b-carousel-slide>
-            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/us-supreme-court.jpg')" style="max-height: 480px" class="slidetext">
-                <div class="carousel-caption">
-                    <p>Serving All Branches</p>
+                    <p>Product Overview</p>
                 </div>
             </b-carousel-slide>
         </b-carousel>
@@ -55,11 +45,6 @@
     }
 
     .carousel-caption {
-
-
-        font-family: 'Black Ops One', cursive;
-
-
     }
 
     .carousel-caption p {
@@ -70,7 +55,6 @@
         top: 50%;
         transform: translate(-50%, -50%);
         font-size: 6vw;
-
 
         /*text outline solid black 1px*/
         text-shadow:

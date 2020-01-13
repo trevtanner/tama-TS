@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav">
+        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav" sticky="true">
             <b-navbar-brand :href="home">TTS</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"/>
@@ -56,6 +56,9 @@
 .vueNav {
     background-color: black;
     color: red;
+
+
+    font-family: 'Black Ops One', cursive;
 }
 @media(min-width:574px){
     #navbar {

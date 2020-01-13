@@ -12,7 +12,7 @@
                         <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-3 align-items-center">
 
                             <!-- Content -->
-                            <a href=""><img src="https://via.placeholder.com/200?text=Tama+Team+Sports+Logo" alt=""></a>
+<!--                            <a href=""><img src="https://via.placeholder.com/200?text=Tama+Team+Sports+Logo" alt=""></a>-->
 
                         </div>
                         <!-- Grid column -->
@@ -21,16 +21,16 @@
                         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
                             <!-- Links -->
-                            <h5 class="text-uppercase font-weight-bold">Products</h5>
+                            <h4 class="text-uppercase">Products</h4>
                             <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
-                                <a href="#">Apparel</a> || <a href="#">Drinkware</a>
+                                <a :href="tag1">Apparel</a> || <a :href="tag2">Drinkware</a>
                             </p>
                             <p>
-                                <a href="#">Bags</a> || <a href="#">Tactical</a>
+                                <a :href="tag3">Bags</a> || <a :href="tag4">Tactical</a>
                             </p>
                             <p>
-                                <a href="#">Coin</a> || <a href="#">Miscellaneous</a>
+                                <a :href="tag5">Coin</a> || <a :href="tag6">Miscellaneous</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -39,16 +39,16 @@
                         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
                             <!-- Links -->
-                            <h5 class="text-uppercase font-weight-bold">Links</h5>
+                            <h4 class="text-uppercase">Links</h4>
                             <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
-                                <a href="#">Products</a> ||  <a href="#">Suppliers</a>
+                                <a :href="productIndex">Products</a> ||  <a :href="suppliersIndex">Manufacturers</a>
                             </p>
                             <p>
-                                <a href="#">Imprinting</a> || <a href="#">FAQ</a>
+                                <a :href="imprint">Imprinting</a> || <a :href="faq">FAQ</a>
                             </p>
                             <p>
-                                <a href="#">Contact Us</a>
+                                <a :href="contact">Contact Us</a>
                             </p>
                            <!-- @if(auth()->user())
 
@@ -72,7 +72,7 @@
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                             <!-- Links -->
-                            <h5 class="text-uppercase font-weight-bold">Tama Team Sports</h5>
+                            <h4 class="text-uppercase">Tama Team Sports</h4>
                             <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
                                 Colorado Springs || CO
@@ -81,7 +81,7 @@
                                 +1-719-999-9999
                             </p>
                             <p>
-                                <a href="mailto: testemail@tamateamsports.com">testemail@tamateamsports.com</a>
+                                <a href="mailto: brianemail@tamateamsports.com">brian@tamateamsports.com</a>
                             </p>
 
                         </div>
@@ -94,7 +94,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3"  >© {{ new Date().getFullYear() }} Copyright
-                    <a href="#"> Tama Team Sports</a> <a href="#">Privacy Policy</a>
+                    <a :href="home"> Tama Team Sports</a> <a href="#">Privacy Policy</a>
                 </div>
                 <!-- Copyright -->
                 <!-- Footer -->
@@ -103,6 +103,20 @@
 
 <script>
     export default {
+        props: {
+            home: {type: String, required: true},
+            productIndex: {type: String, required: true},
+            tag1: {type: String, required: true},
+            tag2: {type: String, required: true},
+            tag3: {type: String, required: true},
+            tag4: {type: String, required: true},
+            tag5: {type: String, required: true},
+            tag6: {type: String, required: true},
+            suppliersIndex: {type: String, required: true},
+            contact: {type: String, required: true},
+            imprint: {type: String, required: true},
+            faq: {type: String, required: true},
+        }
     }
 </script>
 
@@ -110,6 +124,10 @@
 
 .tama-footer {
     background-color: black;
+    font-family: 'Black Ops One', cursive;
+}
+.tama-footer h5 {
+    font-family: 'Black Ops One', cursive;
 }
     .footer-copyright {
         color: red;

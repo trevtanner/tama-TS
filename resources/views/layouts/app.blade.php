@@ -18,8 +18,8 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap&subset=latin-ext" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -59,8 +59,7 @@
         @yield('content')
     </main>
     <div class="footer">
-        <app-footer></app-footer>
-{{--        @include('includes.footer')--}}
+       @include('includes.footer')
     </div>
     <!-- Scripts -->
 

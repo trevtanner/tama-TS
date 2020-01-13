@@ -10,21 +10,27 @@
                 </div>
             </div>
         </header>-->
-        <app-services></app-services>
+        <app-section></app-section>
+        <hr>
         <app-products></app-products>
+        <app-services></app-services>
+        <app-about></app-about>
     </div>
 </template>
 
 <script>
     import Services from './homepage/Services.vue';
-    import About from './homepage/About';
     import TopProducts from "./homepage/TopProducts";
+    import HomeSection from "./homepage/HomeSection";
+    import HomeAbout from "./homepage/HomeAbout";
+
 
     export default {
         components: {
             AppServices: Services,
-            AppAbout: About,
-            AppProducts: TopProducts
+            AppProducts: TopProducts,
+            AppSection: HomeSection,
+            AppAbout: HomeAbout,
     }
     }
 </script>

@@ -7,7 +7,10 @@
 @endsection
 
 @section('content')
-    <div class="container pt-4 tama">
+    <contact-us
+        faq="{{ route('faq') }}"
+    ></contact-us>
+ {{--   <div class="container pt-4 tama">
         <div class="row justify-content-center">
             <h1>Contact Us</h1>
         </div>
@@ -61,5 +64,5 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection
