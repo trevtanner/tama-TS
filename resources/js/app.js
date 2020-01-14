@@ -56,6 +56,7 @@ Vue.component('app-cookie-law', require('./components/includes/CookieLaw.vue').d
 Vue.component('contact-us', require('./components/contact/ContactUs').default);
 Vue.component('app-products', require('./components/Products').default);
 Vue.component('app-tag-image', require('./components/TagsImage').default);
+Vue.component('app-privacy', require('./components/Privacy').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

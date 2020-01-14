@@ -45,4 +45,9 @@ class HomeController extends Controller
         return view('contact')->with('tags', Tag::all());
     }
 
+    public function privacy()
+    {
+        return view('privacy')->with('tags', Tag::all());
+    }
+
 }

@@ -8,7 +8,7 @@
             img-width="1024"
             img-height="300"
         >
-            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/usflag480.jpg')" style="max-height: 480px" class="slidetext">
+            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/tags2bg.jpg')" style="max-height: 480px" class="slidetext">
                 <div class="carousel-caption">
                     <p>{{ tag }}</p>
                 </div>

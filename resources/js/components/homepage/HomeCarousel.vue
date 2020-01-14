@@ -3,8 +3,8 @@
         <b-carousel
             id="carousel-1"
             fade
-            :interval="6000"
-            no-hover-pause='true'
+            :interval="5000"
+            no-hover-pause
             img-width="1024"
             img-height="480"
         >

@@ -3,7 +3,7 @@
         <section class="page-section services pt-3 pb-4">
             <div class="container">
                 <div>
-                    <h1 class="text-center" style="color: white;">Top Services</h1>
+                    <h1 class="text-center" style="color: black;">Top Services</h1>
                     <br>
                     <b-card-group deck class="w-100">
 
@@ -12,9 +12,11 @@
                             img-alt="Heat Press By Scrud123 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=28817022"
                             img-bottom
                             no-body
+                            border-variant="dark"
+                            shadow
 
                         >
-                            <b-card-header class="text-center"><a href="#">Heat Pressing</a></b-card-header>
+                            <b-card-header class="text-center"><a :href="imprint">Heat Pressing</a></b-card-header>
                         </b-card>
 
                         <b-card
@@ -22,9 +24,11 @@
                             img-alt="Image"
                             img-bottom
                             no-body
+                            border-variant="dark"
+                            shadow
 
                         >
-                            <b-card-header class="text-center"><a href="#">Laser Engraving</a></b-card-header>
+                            <b-card-header class="text-center"><a :href="imprint">Laser Engraving</a></b-card-header>
                         </b-card>
 
                         <b-card
@@ -32,9 +36,11 @@
                             img-alt="Image"
                             img-bottom
                             no-body
+                            border-variant="dark"
+                            shadow
 
                         >
-                            <b-card-header class="text-center"><a href="#">Embroidery</a></b-card-header>
+                            <b-card-header class="text-center"><a :href="imprint">Embroidery</a></b-card-header>
                         </b-card>
                     </b-card-group>
                 </div>
@@ -45,12 +51,15 @@
 
 <script>
     export default {
+        props: {
+            imprint: {type: String, required: true},
+        }
     }
 </script>
 
 <style scoped>
 .services {
-    background-color: black;
+    background-color: white;
 }
 
 </style>

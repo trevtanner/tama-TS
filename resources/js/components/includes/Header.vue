@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav" sticky="true">
+        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav" sticky>
             <b-navbar-brand :href="home">TTS</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"/>
@@ -27,7 +26,6 @@
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
-    </div>
 </template>
 
 
@@ -62,7 +60,7 @@
 }
 @media(min-width:574px){
     #navbar {
-        padding: 25px;
+        padding: 15px;
     }
 }
 button{

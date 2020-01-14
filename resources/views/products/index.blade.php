@@ -44,7 +44,7 @@
             <div class="row pt-3">
                     @foreach ($products as $product)
                         <div class="col-lg-4 col-md-6 mb-4 pt-4">
-                            <div class="card h-100">
+                            <div class="card border-dark h-100">
                                 {{--                                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>--}}
                                 <a href="{{ route('products.show', $product->id) }}"><img class="card-img-top"
                                                                                           src="{{ asset('storage/' . $product->index_image) }}"

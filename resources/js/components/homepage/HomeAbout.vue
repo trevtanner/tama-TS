@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="page-section services pt-3 pb-3">
+        <section class="page-section services pt-3 pb-4">
             <div class="container">
                     <div class="text-center">
                 <h1 class="section-heading text-uppercase">About Us</h1>

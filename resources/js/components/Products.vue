@@ -8,7 +8,7 @@
             img-width="1024"
             img-height="480"
         >
-            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/usflag480.jpg')" style="max-height: 480px" class="slidetext">
+            <b-carousel-slide :img-src="require('/opt/lampp/htdocs/tama/tama-TS/public/img/productoverviewbg.jpg')" style="max-height: 480px" class="slidetext">
                 <div class="carousel-caption">
                     <p>Product Overview</p>
                 </div>

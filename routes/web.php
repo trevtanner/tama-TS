@@ -18,11 +18,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Uncommit when pushing live site with products, remove from auth middleware as well
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/imprint', 'HomeController@imprint')->name('imprint');
 Route::get('/faq', 'HomeController@faq')->name('faq');
 Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/privacy-policy', 'HomeController@privacy')->name('privacy');*/
 
 
 Route::middleware(['auth'])->group(function () {
@@ -41,9 +43,31 @@ Route::middleware(['auth'])->group(function () {
     Route::get('products/{product}/edit', 'ProductsController@edit')->name('products.edit');
 
 
+
+//Delete this section after pushing live site
+
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/imprint', 'HomeController@imprint')->name('imprint');
+    Route::get('/faq', 'HomeController@faq')->name('faq');
+    Route::get('/contact', 'HomeController@contact')->name('contact');
+    Route::get('/privacy-policy', 'HomeController@privacy')->name('privacy');
+
+
+    //Route::resource('suppliers', 'SuppliersController');
+    Route::get('suppliers', 'SuppliersController@index')->name('suppliers.index');
+
+    //Route::resource('products', 'ProductsController');
+    Route::get('products', 'ProductsController@index')->name('products.index');
+    Route::get('products.search', 'ProductsController@search')->name('search');
+    Route::get('products/{product}', 'ProductsController@show')->name('products.show');
+
+    Route::get('tts/ma/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
+    Route::get('/tts/tg/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
+    Route::get('/tts/sc/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
 });
 
-//Route::resource('suppliers', 'SuppliersController');
+//Un Comment when pushing live site
+/*//Route::resource('suppliers', 'SuppliersController');
 Route::get('suppliers', 'SuppliersController@index')->name('suppliers.index');
 
 //Route::resource('products', 'ProductsController');
@@ -53,5 +77,5 @@ Route::get('products/{product}', 'ProductsController@show')->name('products.show
 
 Route::get('tts/ma/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
 Route::get('/tts/tg/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
-Route::get('/tts/sc/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
+Route::get('/tts/sc/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');*/
 

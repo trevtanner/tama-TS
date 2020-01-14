@@ -11,4 +11,5 @@
     contact="{{ route('contact') }}"
     imprint="{{ route('imprint') }}"
     faq="{{ route('faq') }}"
+    privacy="{{ route('privacy') }}"
 ></app-footer>

@@ -1,28 +1,18 @@
 <template>
     <!-- Footer -->
-    <footer class="page-footer font-small unique-color-dark tama-footer">
+    <footer class="page-footer font-small unique-color-dark tama-footer absolute">
 
                 <!-- Footer Links -->
-                <div class="container text-center text-md-left mt-5 text-white pt-2">
+                <div class="container text-center mt-5 text-white pt-2">
 
                     <!-- Grid row -->
-                    <div class="row mt-2">
+                    <div class="row">
 
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-3 align-items-center">
-
-                            <!-- Content -->
-<!--                            <a href=""><img src="https://via.placeholder.com/200?text=Tama+Team+Sports+Logo" alt=""></a>-->
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div class="col-lg-4 col-md-4 12 align-content-center">
 
                             <!-- Links -->
                             <h4 class="text-uppercase">Products</h4>
-                            <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
                                 <a :href="tag1">Apparel</a> || <a :href="tag2">Drinkware</a>
                             </p>
@@ -36,11 +26,10 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
 
                             <!-- Links -->
                             <h4 class="text-uppercase">Links</h4>
-                            <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
                                 <a :href="productIndex">Products</a> ||  <a :href="suppliersIndex">Manufacturers</a>
                             </p>
@@ -69,11 +58,10 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
 
                             <!-- Links -->
                             <h4 class="text-uppercase">Tama Team Sports</h4>
-                            <hr class="deep-purple accent-2 mb-2 mt-0 d-inline-block mx-auto" style="width: 60px;">
                             <p>
                                 Colorado Springs || CO
                             </p>
@@ -94,7 +82,7 @@
 
                 <!-- Copyright -->
                 <div class="footer-copyright text-center py-3"  >© {{ new Date().getFullYear() }} Copyright
-                    <a :href="home"> Tama Team Sports</a> <a href="#">Privacy Policy</a>
+                    <a :href="home"> Tama Team Sports</a> <a :href="privacy">Privacy Policy</a>
                 </div>
                 <!-- Copyright -->
                 <!-- Footer -->
@@ -116,7 +104,8 @@
             contact: {type: String, required: true},
             imprint: {type: String, required: true},
             faq: {type: String, required: true},
-        }
+            privacy: {type: String, required: true},
+       }
     }
 </script>
 

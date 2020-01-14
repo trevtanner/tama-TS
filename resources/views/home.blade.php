@@ -9,7 +9,9 @@
 
 @section('content')
     <app-home-carousel></app-home-carousel>
-    <app-home-page></app-home-page>
+    <app-home-page
+        imprint="{{ route('imprint') }}"
+    ></app-home-page>
     <app-cookie-law></app-cookie-law>
 @endsection
 
