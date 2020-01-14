@@ -1,11 +1,16 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Contact Us - Tama Team Sports</title>
+    <title>Tama Team Sports - Contact Us</title>
+    <meta name="description" content="Tama Team Sports contact us page. any and all the information one could need to reach
+    out to Tama Team Sports to get any questions answered">
 @endsection
 
 @section('content')
-    <div class="container pt-4 tama">
+    <contact-us
+        faq="{{ route('faq') }}"
+    ></contact-us>
+ {{--   <div class="container pt-4 tama">
         <div class="row justify-content-center">
             <h1>Contact Us</h1>
         </div>
@@ -59,5 +64,5 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>--}}
 @endsection
