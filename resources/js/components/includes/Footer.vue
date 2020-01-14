@@ -71,7 +71,6 @@
                             <p>
                                 <a href="mailto: brianemail@tamateamsports.com">brian@tamateamsports.com</a>
                             </p>
-
                         </div>
                         <!-- Grid column -->
 
@@ -105,6 +104,7 @@
             imprint: {type: String, required: true},
             faq: {type: String, required: true},
             privacy: {type: String, required: true},
+            logout: {type: String, required: true},
        }
     }
 </script>
