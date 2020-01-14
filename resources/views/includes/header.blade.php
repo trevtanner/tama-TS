@@ -12,3 +12,4 @@
     contact="{{ route('contact') }}"
     search="{{ route('search') }}"
 ></app-header>
+

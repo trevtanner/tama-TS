@@ -58,6 +58,19 @@
             </div>--}}
         @yield('content')
     </main>
+    @guest
+        @else
+    <div class="text-center">
+            <button class="btn" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+         document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form></button>
+
+    </div>
+    @endguest
     <div class="footer">
        @include('includes.footer')
     </div>

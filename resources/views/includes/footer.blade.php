@@ -12,4 +12,5 @@
     imprint="{{ route('imprint') }}"
     faq="{{ route('faq') }}"
     privacy="{{ route('privacy') }}"
+    logout="{{ route('logout') }}"
 ></app-footer>
