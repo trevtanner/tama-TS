@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home');
-});
+});*/
 
 
 Auth::routes();
@@ -64,6 +64,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('tts/ma/{supplier}', [\App\Http\Controllers\ProductsController::class, 'supplier'])->name('supplier');
     Route::get('/tts/tg/{tag}', [\App\Http\Controllers\ProductsController::class, 'tag'])->name('tag');
     Route::get('/tts/sc/{subcategory}', [\App\Http\Controllers\ProductsController::class, 'subcategory'])->name('subcategory');
+
+    Route::get('/', function () {
+        return view('home');
+    });
 });
 
 //Un Comment when pushing live site

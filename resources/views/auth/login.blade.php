@@ -3,8 +3,9 @@
 @section('content')
     <div class="container pt-4">
         <div class="row justify-content-center">
+            <h1>SITE IN PRE-PRODUCTION</h1>
             <div class="col-md-8">
-                <div class="card">
+                <div class="card dark">
                     <div class="card-header">{{ __('Login') }}</div>
 
                     <div class="card-body">
