@@ -60,6 +60,11 @@ h6 {
 .services {
 
 }
+
+.btn {
+color: white;
+    background-color: red;
+}
 @charset "UTF-8";
 
 /*!
