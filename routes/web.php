@@ -29,11 +29,11 @@ Route::get('/privacy-policy', 'HomeController@privacy')->name('privacy');*/
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::post('suppliers', 'SuppliersController@store')->name('suppliers.store');
-    Route::get('suppliers/create', 'SuppliersController@create')->name('suppliers.create');
-    Route::delete('suppliers/{supplier}', 'SuppliersController@destroy')->name('suppliers.destroy');
-    Route::put('suppliers/{supplier}', 'SuppliersController@update')->name('suppliers.update');
-    Route::get('suppliers/{supplier}/edit', 'SuppliersController@edit')->name('suppliers.edit');
+    Route::post('manufacturers', 'SuppliersController@store')->name('suppliers.store');
+    Route::get('manufacturers/create', 'SuppliersController@create')->name('suppliers.create');
+    Route::delete('manufacturers/{supplier}', 'SuppliersController@destroy')->name('suppliers.destroy');
+    Route::put('manufacturers/{supplier}', 'SuppliersController@update')->name('suppliers.update');
+    Route::get('manufacturers/{supplier}/edit', 'SuppliersController@edit')->name('suppliers.edit');
 
 
     Route::post('products', 'ProductsController@store')->name('products.store');
@@ -54,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
 
 
     //Route::resource('suppliers', 'SuppliersController');
-    Route::get('suppliers', 'SuppliersController@index')->name('suppliers.index');
+    Route::get('manufacturers', 'SuppliersController@index')->name('suppliers.index');
 
     //Route::resource('products', 'ProductsController');
     Route::get('products', 'ProductsController@index')->name('products.index');

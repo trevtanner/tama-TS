@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <h1>SITE IN PRE-PRODUCTION</h1>
             <div class="col-md-8">
-                <div class="card dark">
+                <div class="card text-white bg-dark">
                     <div class="card-header">{{ __('Login') }}</div>
 
                     <div class="card-body">
@@ -61,7 +61,7 @@
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn">
                                         {{ __('Login') }}
                                     </button>
 
