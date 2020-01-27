@@ -50,12 +50,12 @@ class ProductsController extends Controller
     public function store(CreateProductRequest $request)
     {
 
-        $indeximagePath = $request->index_image->store('products');
+        $indeximagePath = $request->index_image->store('products', 'public');
 
         $index_image = \Intervention\Image\Facades\Image::make("{$indeximagePath}")->resize(300, 300);
         $index_image->save();
 
-        $imagePath = $request->image->store('products');
+        $imagePath = $request->image->store('products', 'public');
 
         $image = \Intervention\Image\Facades\Image::make("{$imagePath}")->resize(1920, 1080);
         $image->save();
