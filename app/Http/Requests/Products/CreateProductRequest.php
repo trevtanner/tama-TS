@@ -28,6 +28,7 @@ class CreateProductRequest extends FormRequest
             'shortdescript'=> 'required',
             'longdescript'=> 'required',
             'image' => 'required|image',
+            'index_image' => 'required|image',
             'supplier' => 'required',
             'tag' => 'required',
             'subcategory' => 'required',

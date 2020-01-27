@@ -52,12 +52,12 @@ class ProductsController extends Controller
 
         $indeximagePath = $request->index_image->store('products');
 
-        $index_image = \Intervention\Image\Facades\Image::make("storage/{$indeximagePath}")->resize(300, 300);
+        $index_image = \Intervention\Image\Facades\Image::make("{$indeximagePath}")->resize(300, 300);
         $index_image->save();
 
         $imagePath = $request->image->store('products');
 
-        $image = \Intervention\Image\Facades\Image::make("storage/{$imagePath}")->resize(1920, 1080);
+        $image = \Intervention\Image\Facades\Image::make("{$imagePath}")->resize(1920, 1080);
         $image->save();
 
         $product = Product::create([
