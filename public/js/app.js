@@ -38733,7 +38733,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slidetext[data-v-470452c5] {\n    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */\n    filter: grayscale(0%);\n}\n.carousel-caption[data-v-470452c5] {\n\n\n    font-family: 'Black Ops One', cursive;\n}\n.carousel-caption p[data-v-470452c5] {\n    position: fixed;\n    margin: 0;\n    color: white;\n    left: 50%;\n    top: 50%;\n    -webkit-transform: translate(-50%, -50%);\n            transform: translate(-50%, -50%);\n    font-size: 6vw;\n\n\n    /*text outline solid black 1px*/\n    text-shadow:\n        -1px -1px 0 #000,\n        1px -1px 0 #000,\n        -1px 1px 0 #000,\n        1px 1px 0 #000;\n}\n", ""]);
+exports.push([module.i, "\n.slidetext[data-v-470452c5] {\n    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */\n    filter: grayscale(0%);\n}\n.carousel-caption[data-v-470452c5] {\n\n\n    font-family: 'Black Ops One', cursive;\n}\n.carousel-caption p[data-v-470452c5] {\n    position:inherit;\n    margin: 0;\n    color: white;\n    left: auto;\n    top: auto;\n    right: auto;\n    bottom: 40px;\n    font-size: 6vw;\n\n    /*text outline solid black 1px*/\n    text-shadow:\n        -1px -1px 0 #000,\n        1px -1px 0 #000,\n        -1px 1px 0 #000,\n        1px 1px 0 #000;\n}\n\n\n\n/*Everything under 400px*/\n@media (max-width: 400px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 5px;\n}\n}\n/*Everything under 576 to 400px*/\n@media (min-width: 400px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 50px;\n}\n}\n\n\n/*Small devices (landscape phones, 576px and up)*/\n@media (min-width: 576px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 50px;\n}\n}\n\n/*Medium devices (tablets, 768px and up)*/\n@media (min-width: 768px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 50px;\n}\n}\n\n/*Large devices (desktops, 992px and up)*/\n@media (min-width: 992px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 50px;\n}\n}\n\n/*Extra large devices (large desktops, 1200px and up)*/\n@media (min-width: 1200px) {\n.carousel-caption p[data-v-470452c5] {\n        position: inherit;\n        margin: 0;\n        color: white;\n        left: auto;\n        top: auto;\n        right: auto;\n        bottom: 50px;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -87345,15 +87345,14 @@ if (token) {
 /*!**********************************************!*\
   !*** ./resources/js/components/HomePage.vue ***!
   \**********************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _HomePage_vue_vue_type_template_id_fa44bb0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HomePage.vue?vue&type=template&id=fa44bb0e&scoped=true& */ "./resources/js/components/HomePage.vue?vue&type=template&id=fa44bb0e&scoped=true&");
 /* harmony import */ var _HomePage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./HomePage.vue?vue&type=script&lang=js& */ "./resources/js/components/HomePage.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _HomePage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _HomePage_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -87383,7 +87382,7 @@ component.options.__file = "resources/js/components/HomePage.vue"
 /*!***********************************************************************!*\
   !*** ./resources/js/components/HomePage.vue?vue&type=script&lang=js& ***!
   \***********************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

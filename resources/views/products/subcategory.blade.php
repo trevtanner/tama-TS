@@ -81,9 +81,6 @@
 
         </div>
         <!-- /.col-lg-9 -->
-
-        </div>
-        <div class="container">
     <!-- /.row -->
 @endsection
 

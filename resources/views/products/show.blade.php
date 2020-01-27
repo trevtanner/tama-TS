@@ -11,7 +11,7 @@
             <div class="col-lg-6 pt-2 tama">
                 <div class="card mt-4 align-items-center">
                     {{--                    <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">--}}
-                    <img class="card-img-top pt-2" src="{{ asset('storage/' . $product->image) }}" alt="">
+                    <img class="card-img-top pt-2" src={{ asset('storage/'.$product->image) }} alt="">
                     <div class="card-body text-center">
                         <h3 class="card-title">{{ $product->title }}</h3>
                         @if(auth()->user())

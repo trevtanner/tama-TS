@@ -63,14 +63,14 @@
     }
 
     .carousel-caption p {
-        position: fixed;
+        position:inherit;
         margin: 0;
         color: white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: auto;
+        top: auto;
+        right: auto;
+        bottom: 40px;
         font-size: 6vw;
-
 
         /*text outline solid black 1px*/
         text-shadow:
@@ -79,4 +79,89 @@
             -1px 1px 0 #000,
             1px 1px 0 #000;
     }
+
+
+
+    /*Everything under 400px*/
+    @media (max-width: 400px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 5px;
+        }
+
+    }
+    /*Everything under 576 to 400px*/
+    @media (min-width: 400px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 50px;
+        }
+
+    }
+
+
+    /*Small devices (landscape phones, 576px and up)*/
+    @media (min-width: 576px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 50px;
+        }
+
+    }
+
+    /*Medium devices (tablets, 768px and up)*/
+    @media (min-width: 768px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 50px;
+        }
+    }
+
+    /*Large devices (desktops, 992px and up)*/
+    @media (min-width: 992px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 50px;
+        }
+
+    }
+
+    /*Extra large devices (large desktops, 1200px and up)*/
+    @media (min-width: 1200px) {
+        .carousel-caption p {
+            position: inherit;
+            margin: 0;
+            color: white;
+            left: auto;
+            top: auto;
+            right: auto;
+            bottom: 50px;
+        }
+    }
+
 </style>
