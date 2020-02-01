@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container pt-4">
+    <div class="container pt-4 pb-4">
         <div class="row justify-content-center">
-            <h1>SITE IN PRE-PRODUCTION</h1>
-            <div class="col-md-8">
+                <div class="col-md-8">
                 <div class="card text-white bg-dark">
-                    <div class="card-header">{{ __('Login') }}</div>
+                    <div class="card-header">{{ __('Login') }} - Site In Pre-Production</div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">

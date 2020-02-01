@@ -12,15 +12,21 @@ class SuppliersTableSeeder extends Seeder
     public function run()
     {
         DB::table('suppliers')->insert([
-            'name' => 'Nike'
-        ]);
-
-        DB::table('suppliers')->insert([
             'name' => 'Yeti'
         ]);
 
         DB::table('suppliers')->insert([
-            'name' => 'Under Armour'
+            'name' => 'Nalgene H2O'
+        ]);
+
+        DB::table('suppliers')->insert([
+            'name' => 'Benshot'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'Camelback'
+        ]);
+        DB::table('suppliers')->insert([
+            'name' => 'K-Bar'
         ]);
         DB::table('suppliers')->insert([
             'name' => 'CRKT'
@@ -29,13 +35,13 @@ class SuppliersTableSeeder extends Seeder
             'name' => 'Smith & Wesson'
         ]);
         DB::table('suppliers')->insert([
-            'name' => 'Gerber'
+            'name' => 'Nite ize'
         ]);
         DB::table('suppliers')->insert([
-            'name' => 'Otter Box'
+            'name' => 'Castelli'
         ]);
         DB::table('suppliers')->insert([
-            'name' => 'Quicksilver'
+            'name' => 'Garland Logotop'
         ]);
     }
 }

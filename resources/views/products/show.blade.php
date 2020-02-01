@@ -69,9 +69,9 @@
                         <p class="card-text">
                             <a href="{{ route('tag', $product->tag->id) }}">{{ $product->tag->name }}</a>
                         </p>
-                        <p class="card-text">
-                            <a href="{{ route('subcategory', $product->subcategory->id) }}">{{ $product->subcategory->name }}</a>
-                        </p>
+{{--                        <p class="card-text">--}}
+{{--                            <a href="{{ route('subcategory', $product->subcategory->id) }}">{{ $product->subcategory->name }}</a>--}}
+{{--                        </p>--}}
 
 
                     </div>

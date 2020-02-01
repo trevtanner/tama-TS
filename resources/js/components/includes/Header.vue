@@ -1,5 +1,5 @@
 <template>
-        <b-navbar toggleable="sm" type="" id="navbar" class="vueNav" sticky>
+        <b-navbar toggleable="md" type="" id="navbar" class="vueNav">
             <b-navbar-brand :href="home">TTS</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"/>
@@ -7,21 +7,23 @@
             <b-collapse id="nav-collapse" is-nav>
 
                 <!-- Right aligned nav items -->
-                <b-navbar-nav class="ml-auto">
-
-                    <b-nav-item :href="home" right>About</b-nav-item>
-                    <b-nav-item-dropdown text="Products" right>
-                        <b-dropdown-item :href="productIndex">Product Overview</b-dropdown-item>
-                        <b-dropdown-item :href="tag1">Apparel</b-dropdown-item>
-                        <b-dropdown-item :href="tag2">Drinkware</b-dropdown-item>
-                        <b-dropdown-item :href="tag3">Bags</b-dropdown-item>
-                        <b-dropdown-item :href="tag4">Tactical</b-dropdown-item>
-                        <b-dropdown-item :href="tag5">Coins</b-dropdown-item>
-                        <b-dropdown-item :href="tag6">Miscellaneous</b-dropdown-item>
+                <b-navbar-nav>
+                    <b-nav-item-dropdown text="Products" left>
+                        <b-dropdown-item :href="tag1" class="dropdowns">Drinkware</b-dropdown-item>
+                        <b-dropdown-item :href="tag2" class="dropdowns">Apparel</b-dropdown-item>
+                        <b-dropdown-item :href="tag3" class="dropdowns">Knives/Tools</b-dropdown-item>
+                        <b-dropdown-item :href="tag4" class="dropdowns">Electronics</b-dropdown-item>
+                        <b-dropdown-item :href="tag5" class="dropdowns">Writing/Utensils</b-dropdown-item>
+                        <b-dropdown-item :href="tag6" class="dropdowns">Bags</b-dropdown-item>
+                        <b-dropdown-item :href="tag6" class="dropdowns">Miscellaneous</b-dropdown-item>
                     </b-nav-item-dropdown>
-                    <b-nav-item :href="suppliersIndex" right>Manufacturers</b-nav-item>
-                    <b-nav-item :href="contact" right>Contact Us</b-nav-item>
-                    <b-nav-item :href="search" right>Search</b-nav-item>
+                    <b-nav-item :href="imprint" class="pr-2">Decoration/Art Generation</b-nav-item>
+                </b-navbar-nav>
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-form>
+                        <b-form-input size="sm" class="mr-sm-2 dropdowns" placeholder="Search Products"></b-form-input>
+                        <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
+                    </b-nav-form>
 
                 </b-navbar-nav>
             </b-collapse>
@@ -45,6 +47,7 @@
             suppliersIndex: {type: String, required: true},
             contact: {type: String, required: true},
             search: {type: String, required: true},
+            imprint: {type: String, required: true},
         }
     }
 
@@ -52,11 +55,15 @@
 
 <style scoped>
 .vueNav {
-    background-color: black;
+    background-color: transparent;
     color: red;
-
-
+    /*position: relative;*/
     font-family: 'Black Ops One', cursive;
+    text-shadow:
+        -0.75px -0.75px 0 #000,
+        0.75px -0.75px 0 #000,
+        -0.75px 0.75px 0 #000,
+        0.75px 0.75px 0 #000;
 }
 @media(min-width:574px){
     #navbar {
@@ -66,5 +73,8 @@
 button{
     border-color: red;
 }
+    .dropdowns {
+        text-shadow: none;
+    }
 </style>
 

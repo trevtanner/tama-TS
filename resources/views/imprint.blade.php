@@ -1,18 +1,22 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Tama Team Sports - Imprint Information</title>
+    <title>Tama Team Sports - Decoration/Art Generation Information</title>
     <meta name="description" content="Tama Team Sports has many different options for customizing anything you can think of
     with any design you can imagine. We specialize in heat press, screen printing, embroidery, and laser engraving.">
 @endsection
 
 @section('content')
-    <div class="container pt-4 tama">
-        <div class="row justify-content-center text-center">
-            <h1>Imprinting</h1>
+    {{--<div class="container pt-4 tama">
+        <div class="row text-center">
+            <div class="col-12">
+            <h1> Decoration/Art Generation</h1>
+            </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row text-center">
+            <div class="col-12">
         <h4>by Tama Team Sports</h4>
+        </div>
         </div>
         <br>
         <div class="row justify-content-center">
@@ -25,10 +29,8 @@
                     <a href="{{ route('contact') }}">contact us</a> if you have any other questions.
                 </h6>
             </div>
-        </div>
-        <br>
-        <hr>
-        <br>
+        </div>--}}
+    <app-imprint-section></app-imprint-section>
         {{--Heat press component--}}
         <app-heat-press></app-heat-press>
         <br>
@@ -46,5 +48,14 @@
         <br>
         {{--Laser engraving component--}}
         <app-laser-engraving></app-laser-engraving>
-    </div>
+    <br>
+    <hr>
+    <br>
+    {{--Laser engraving component--}}
+    <app-pad-printing></app-pad-printing>
+    <br>
+    <hr>
+    <br>
+    {{--Laser engraving component--}}
+    <app-debossing></app-debossing>
 @endsection

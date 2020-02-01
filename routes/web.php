@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
 //Delete this section after pushing live site
 
     Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/imprint', 'HomeController@imprint')->name('imprint');
+    Route::get('/art', 'HomeController@imprint')->name('imprint');
     Route::get('/faq', 'HomeController@faq')->name('faq');
     Route::get('/contact', 'HomeController@contact')->name('contact');
     Route::get('/privacy-policy', 'HomeController@privacy')->name('privacy');

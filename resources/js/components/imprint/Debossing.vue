@@ -4,7 +4,7 @@
             <b-col cols="2"/>
             <b-col cols="8" class="text-center pt-2 highlight">
                 <h3>
-                    Screen Printing
+                    Debossing
                 </h3>
             </b-col>
             <b-col cols="2"/>

@@ -12,19 +12,22 @@ class TagsTableSeeder extends Seeder
     public function run()
     {
         DB::table('tags')->insert([
-            'name' => 'Apparel'
-        ]);
-        DB::table('tags')->insert([
             'name' => 'Drinkware'
         ]);
         DB::table('tags')->insert([
+            'name' => 'Apparel'
+        ]);
+        DB::table('tags')->insert([
+            'name' => 'Knives/Tools'
+        ]);
+        DB::table('tags')->insert([
+            'name' => 'Electronics'
+        ]);
+        DB::table('tags')->insert([
+            'name' => 'Writing/Utensils'
+        ]);
+        DB::table('tags')->insert([
             'name' => 'Bags'
-        ]);
-        DB::table('tags')->insert([
-            'name' => 'Tactical'
-        ]);
-        DB::table('tags')->insert([
-            'name' => 'Coins'
         ]);
         DB::table('tags')->insert([
             'name' => 'Miscellaneous'

@@ -11,5 +11,6 @@
     suppliers-index="{{ route('suppliers.index') }}"
     contact="{{ route('contact') }}"
     search="{{ route('search') }}"
+    imprint="{{route('imprint')}}"
 ></app-header>
 

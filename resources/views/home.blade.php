@@ -8,7 +8,7 @@
 @endsection
 
 @section('content')
-    <app-home-carousel></app-home-carousel>
+    {{--    <app-home-carousel></app-home-carousel>--}}
     <app-home-page
         imprint="{{ route('imprint') }}"
     ></app-home-page>
