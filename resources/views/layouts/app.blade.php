@@ -43,6 +43,7 @@
 <body>
 <div id="app">
     <main>
+        <app-home-img></app-home-img>
         @include('includes.header')
         {{--    <div class="container pb-4">
                 @if(session()->has('success'))
@@ -58,7 +59,7 @@
             </div>--}}
         @yield('content')
     </main>
-    @guest
+@guest
         @else
     <div class="text-center">
             <button class="btn" href="{{ route('logout') }}"

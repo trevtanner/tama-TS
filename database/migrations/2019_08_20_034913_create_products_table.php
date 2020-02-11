@@ -23,9 +23,9 @@ class CreateProductsTable extends Migration
             $table->text('longdescript');
             $table->string('index_image');
             $table->string('image');
-            $table->integer('supplier_id');
-            $table->integer('tag_id');
-            $table->integer('subcategory_id');
+            $table->integer('supplier_id')->nullable();
+            $table->integer('tag_id')->nullable();
+            $table->integer('subcategory_id')->nullable();
             $table->timestamps();
         });
     }

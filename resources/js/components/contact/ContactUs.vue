@@ -1,12 +1,14 @@
 <template>
     <div class="container pt-4 tama">
-        <div class="row justify-content-center">
+        <div class="row header">
+            <b-col class="text-center">
             <h1>Contact Us</h1>
+            </b-col>
         </div>
         <br>
         <div class="row justify-content-center pb-5">
             <div class="col-md-8">
-                <h5 class="text-center">
+                <h5 class="text-center header">
                     To submit any order please contact us at the following information. For any general questions please
                     visit
                     our <a :href="faq">FAQ</a> page. For any specific questions don't hesitate to call or
@@ -46,5 +48,12 @@
 </script>
 
 <style scoped>
-
+.header {
+    color: white;
+    text-shadow:
+        -0.75px -0.75px 0 #000,
+        0.75px -0.75px 0 #000,
+        -0.75px 0.75px 0 #000,
+        0.75px 0.75px 0 #000;
+}
 </style>

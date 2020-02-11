@@ -32,6 +32,13 @@ import BootstrapVue from 'bootstrap-vue';
 
 Vue.use(BootstrapVue);
 
+/**
+ * This Loads Vuejs Dropdown via npm install bp-vuejs-dropdown --save
+ */
+import Dropdown from 'bp-vuejs-dropdown';
+
+Vue.use(Dropdown);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -45,9 +52,12 @@ Vue.use(BootstrapVue);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('app-heat-press', require('./components/imprint/HeatPress.vue').default);
+Vue.component('app-debossing', require('./components/imprint/Debossing').default);
+Vue.component('app-pad-printing', require('./components/imprint/PadPrinting').default);
 Vue.component('app-laser-engraving', require('./components/imprint/LaserEngraving.vue').default);
 Vue.component('app-embroidery', require('./components/imprint/Embroidery.vue').default);
 Vue.component('app-screen-printing', require('./components/imprint/ScreenPrinting.vue').default);
+Vue.component('app-imprint-section', require('./components/imprint/ImprintSection.vue').default);
 Vue.component('app-header', require('./components/includes/Header.vue').default);
 Vue.component('app-footer', require('./components/includes/Footer.vue').default);
 Vue.component('app-home-page', require('./components/HomePage.vue').default);
@@ -57,6 +67,9 @@ Vue.component('contact-us', require('./components/contact/ContactUs').default);
 Vue.component('app-products', require('./components/Products').default);
 Vue.component('app-tag-image', require('./components/TagsImage').default);
 Vue.component('app-privacy', require('./components/Privacy').default);
+Vue.component('app-home-img', require('./components/homepage/HomeImg').default);
+Vue.component('app-home-top', require('./components/homepage/TopProducts').default);
+Vue.component('app-faq', require('./components/faq/FAQ').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
