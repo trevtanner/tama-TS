@@ -14,8 +14,7 @@
            <b-col cols="8" class="text-center highlight pt-2">
                <div class="iframe-container">
                    <iframe
-                       src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                       frameborder="0"
+                       src="https://www.youtube.com/embed/ujwiWjJLwBg"
                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                        allowfullscreen/>
                </div>

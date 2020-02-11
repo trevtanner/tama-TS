@@ -15,7 +15,7 @@
                         <b-dropdown-item :href="tag4" class="dropdowns">Electronics</b-dropdown-item>
                         <b-dropdown-item :href="tag5" class="dropdowns">Writing/Utensils</b-dropdown-item>
                         <b-dropdown-item :href="tag6" class="dropdowns">Bags</b-dropdown-item>
-                        <b-dropdown-item :href="tag6" class="dropdowns">Miscellaneous</b-dropdown-item>
+                        <b-dropdown-item :href="tag7" class="dropdowns">Miscellaneous</b-dropdown-item>
                     </b-nav-item-dropdown>
                     <b-nav-item :href="imprint" class="pr-2">Decoration/Art Generation</b-nav-item>
                 </b-navbar-nav>
@@ -44,6 +44,7 @@
             tag4: {type: String, required: true},
             tag5: {type: String, required: true},
             tag6: {type: String, required: true},
+            tag7: {type: String, required: true},
             suppliersIndex: {type: String, required: true},
             contact: {type: String, required: true},
             search: {type: String, required: true},

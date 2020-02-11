@@ -8,6 +8,7 @@
     tag4="{{route('tag', 4)}}"
     tag5="{{route('tag', 5)}}"
     tag6="{{route('tag', 6)}}"
+    tag7="{{route('tag', 7)}}"
     suppliers-index="{{ route('suppliers.index') }}"
     contact="{{ route('contact') }}"
     search="{{ route('search') }}"

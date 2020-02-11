@@ -69,6 +69,7 @@ Vue.component('app-tag-image', require('./components/TagsImage').default);
 Vue.component('app-privacy', require('./components/Privacy').default);
 Vue.component('app-home-img', require('./components/homepage/HomeImg').default);
 Vue.component('app-home-top', require('./components/homepage/TopProducts').default);
+Vue.component('app-faq', require('./components/faq/FAQ').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
