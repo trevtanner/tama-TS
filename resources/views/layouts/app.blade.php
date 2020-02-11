@@ -41,7 +41,8 @@
     @yield('css')
 </head>
 <body>
-<div id="app">
+<div id="app" style="position: relative; min-height: 100vh;">
+    <div class="main">
     <main>
         <app-home-img></app-home-img>
         @include('includes.header')
@@ -61,6 +62,8 @@
     </main>
 @guest
         @else
+    <div class="row">
+        <div class="col">
     <div class="text-center">
             <button class="btn" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
@@ -70,6 +73,9 @@
                     @csrf
                 </form></button>
 
+    </div>
+        </div>
+    </div>
     </div>
     @endguest
     <div class="footer">

@@ -1,6 +1,6 @@
 <template>
     <!-- Footer -->
-    <footer class="page-footer font-small unique-color-dark tama-footer absolute">
+    <footer class="page-footer font-small unique-color-dark tama-footer">
 
                 <!-- Footer Links -->
                 <div class="container text-center mt-3 text-white pt-2">
@@ -123,19 +123,20 @@
 
 <style scoped>
 
+.tama-footer h5 {
+    font-family: 'Black Ops One', cursive;
+}
 .tama-footer {
     position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: #000011;
     font-family: 'Black Ops One', cursive;
 }
-.tama-footer h5 {
-    font-family: 'Black Ops One', cursive;
-}
-    .footer-copyright {
+.footer-copyright {
         color: red;
     }
-    .btn {
+.btn {
         border-color: red;
     }
 </style>

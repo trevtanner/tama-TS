@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53cccf3-832b-4350-9a9f-4a3c1ebb35a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/faq/FAQ.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/addon.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/addon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Privacy.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Privacy.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/contact/ContactUs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/contact/ContactUs.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/imprint/HeatPress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/imprint/HeatPress.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/includes/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/includes/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/faq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/includes/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/includes/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +66,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="backgroundimg" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -213,18 +206,18 @@
     <property name="settings.editor.splitter.proportion" value="0.32369298" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/components" />
-      <recent name="$PROJECT_DIR$/public/storage/products" />
-      <recent name="$PROJECT_DIR$/public/img" />
-      <recent name="$PROJECT_DIR$/resources/js/components/imprint" />
-      <recent name="$PROJECT_DIR$/resources/js/components/homepage" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/components/imprint" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/js/components" />
       <recent name="$PROJECT_DIR$/public/storage/products" />
+      <recent name="$PROJECT_DIR$/resources/js/components/homepage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/components" />
+      <recent name="$PROJECT_DIR$/public/storage/products" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/resources/js/components/imprint" />
       <recent name="$PROJECT_DIR$/resources/js/components/homepage" />
     </key>
   </component>
@@ -281,6 +274,7 @@
         <item itemvalue="npm.production" />
         <item itemvalue="npm.prod" />
         <item itemvalue="npm.development" />
+        <item itemvalue="npm.watch" />
       </list>
     </recent_temporary>
   </component>
@@ -645,10 +639,10 @@
       <screen x="0" y="27" width="1280" height="773" />
     </state>
     <state x="296" y="240" key="com.intellij.ide.util.TipDialog/0.27.1280.773@0.27.1280.773" timestamp="1579491986734" />
-    <state x="408" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578976573289">
+    <state x="408" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581410946392">
       <screen x="0" y="27" width="1280" height="773" />
     </state>
-    <state x="408" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1280.773@0.27.1280.773" timestamp="1578976573289" />
+    <state x="408" y="332" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1280.773@0.27.1280.773" timestamp="1581410946392" />
     <state x="366" y="126" width="537" height="572" key="git4idea.branch.GitSmartOperationDialog" timestamp="1578981224758">
       <screen x="0" y="27" width="1280" height="773" />
     </state>
@@ -661,9 +655,9 @@
       <screen x="0" y="27" width="1280" height="773" />
     </state>
     <state x="304" y="183" key="run.anything.popup/0.27.1280.773@0.27.1280.773" timestamp="1580203515619" />
-    <state x="639" y="51" width="672" height="678" key="search.everywhere.popup" timestamp="1581410252787">
+    <state x="639" y="51" width="672" height="678" key="search.everywhere.popup" timestamp="1581412166707">
       <screen x="0" y="27" width="1280" height="773" />
     </state>
-    <state x="639" y="51" width="672" height="678" key="search.everywhere.popup/0.27.1280.773@0.27.1280.773" timestamp="1581410252787" />
+    <state x="639" y="51" width="672" height="678" key="search.everywhere.popup/0.27.1280.773@0.27.1280.773" timestamp="1581412166707" />
   </component>
 </project>

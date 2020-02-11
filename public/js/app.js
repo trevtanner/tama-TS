@@ -39581,7 +39581,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.tama-footer[data-v-e51f76f8] {\n    position: absolute;\n    width: 100%;\n    background-color: #000011;\n    font-family: 'Black Ops One', cursive;\n}\n.tama-footer h5[data-v-e51f76f8] {\n    font-family: 'Black Ops One', cursive;\n}\n.footer-copyright[data-v-e51f76f8] {\n        color: red;\n}\n.btn[data-v-e51f76f8] {\n        border-color: red;\n}\n", ""]);
+exports.push([module.i, "\n.tama-footer h5[data-v-e51f76f8] {\n    font-family: 'Black Ops One', cursive;\n}\n.tama-footer[data-v-e51f76f8] {\n    position: absolute;\n    bottom: 0;\n    width: 100%;\n    background-color: #000011;\n    font-family: 'Black Ops One', cursive;\n}\n.footer-copyright[data-v-e51f76f8] {\n        color: red;\n}\n.btn[data-v-e51f76f8] {\n        border-color: red;\n}\n", ""]);
 
 // exports
 
@@ -76932,10 +76932,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "footer",
-    {
-      staticClass:
-        "page-footer font-small unique-color-dark tama-footer absolute"
-    },
+    { staticClass: "page-footer font-small unique-color-dark tama-footer" },
     [
       _c("div", { staticClass: "container text-center mt-3 text-white pt-2" }, [
         _c("div", { staticClass: "row" }, [
